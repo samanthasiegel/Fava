@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170326191830) do
+ActiveRecord::Schema.define(version: 20170326233807) do
 
   create_table "fava_users", force: :cascade do |t|
     t.string   "first_name"
@@ -24,6 +24,27 @@ ActiveRecord::Schema.define(version: 20170326191830) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.string   "remember_digest"
+  end
+
+  create_table "food_items", force: :cascade do |t|
+    t.integer "Restaurant_id"
+    t.string  "food_name"
+    t.string  "description"
+    t.string  "category"
+    t.string  "price"
+    t.string  "size"
+    t.string  "allergy_info"
+    t.integer "dietary_info"
+    t.index ["Restaurant_id"], name: "index_food_items_on_Restaurant_id"
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "open_hour"
+    t.string   "close_hour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
