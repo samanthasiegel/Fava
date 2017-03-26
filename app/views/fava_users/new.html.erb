@@ -1,0 +1,45 @@
+<% provide(:title, "Sign Up") %>
+
+<!-- Main -->
+<article id="main">
+	<section class="wrapper style5" style="margin-left:50px; margin-right:50px; margin-top:50px;">
+		<div class="inner">
+
+			<section>
+				<h4>Sign Up</h4>
+				<%= form_for(@fava_user) do |f| %>
+					<%= render 'shared/error_messages' %>
+					<div class = "row uniform">
+						<div class="6u 12u$(xsmall)">
+							<%= f.text_field :first_name, class: 'form-control', placeholder:"First name"%>
+						</div>
+						<div class="6u 12u$(xsmall)">
+							<%= f.text_field :last_name, class: 'form-control', placeholder:"Last name"%>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :email, class: 'form-control', placeholder:"Duke email address"%>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :phone, class: 'form-control', placeholder:"Phone number" %>
+						</div>
+						<div class="12u$">
+							<%= f.password_field :password, class: 'form-control', placeholder:"Password" %>
+						</div>
+						<div class="12u$">
+							<%= f.password_field :password_confirmation, class: 'form-control', placeholder:"Confirm password" %>
+						</div>
+						<div class="12u$">
+							<ul class="actions">
+								<%= f.submit "Sign Up", class: "special" %>
+							</ul>
+						</div>
+					</div>
+				<% end %>
+				</form> 
+			</section>
+
+			
+
+		</div>
+	</section>
+</article>

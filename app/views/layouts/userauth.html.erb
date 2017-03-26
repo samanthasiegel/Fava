@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> </title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'jquery','data-turbolinks-track': 'reload' %>
+  </head>
+
+ <body style="background-image:url(http://cdn.playbuzz.com/cdn/181b3dab-b8c4-41ce-8001-19468d689dda/3f80c052-deb1-478a-8ace-5e75544a6b23.jpg); background-size:cover; background-repeat: no-repeat;">
+    <div style="background-color:rgba(0, 0, 0, 0.6); width:100%; height:100%; padding-bottom:150px;">
+      <div id="page-wrapper">
+
+        <%= render 'layouts/header' %>
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.scrollex.min.js"></script>
+      <script src="/js/jquery.scrolly.min.js"></script>
+      <script src="/js/skel.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+  </body>
+</html>

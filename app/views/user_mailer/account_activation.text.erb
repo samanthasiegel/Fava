@@ -1,0 +1,5 @@
+Hi <%= @fava_user.first_name %>,
+
+Welcome to Fava! Click on the link below to activate your account:
+
+<%= edit_account_activation_url(@fava_user.activation_token, email: @fava_user.email) %>
