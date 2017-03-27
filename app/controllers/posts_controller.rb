@@ -74,7 +74,7 @@ class PostsController < ApplicationController
   end
 
 
-  def post_order
+  def create
       flash.now[:info] = "Your request has been posted!"
       respond_to do |format|
         format.html {redirect_to order_path}

@@ -9,7 +9,7 @@
 			<% flash.each do |key, value| %>
         		<div class="alert alert-<%= key %>"><%= value %></div>
       		<% end %>
-			<%= form_for @post do |f| %>
+			<%= form_for @post, :url => url_for(:controller => 'posts', :action => 'create') do |f| %>
 					<div class="row uniform">
 						<h4> What are you hungry for? </h4>
 						<div class="12u$">

@@ -55,9 +55,9 @@
 2,"Walnut Gorgonzola Salad","Mixed greens, grape & sundried tomatoes, onion, tossed in balsamic vinaigrette","Salads",7.99,\N,"nuts",1
 2,"Asian Chicken Salad","Romaine, cabbage, carrots, crunchy walnuts & noodles, tossed in peanut honey lime dressing","Salads",8.29,\N,"peanuts, tree nuts",0
 2,"Crunchy Broccoli Salad","Romaine, grape tomatoes, crunchy walnyts & noodles, tossed in sweet red wine vinaigrette","Salads",7.99,\N,"nuts",2
-2,"Goat Cheese Salad","Romaine, walnuts, dried cranberries, oranges, onions, tossed in shallot vinaigrette","Salads",8.19,\N,"nuts",3
+2,"Goat Cheese Salad","Romaine, walnuts, dried cranberries, oranges, onions, tossed in shallot vinaigrette","Salads",8.19,\N,"nuts",1
 2,"Caesar with Chicken Salad","Caesar salad with chicken strips","Salads",8.29,\N,"dairy, fish",0
-2,"Feta Mediterranean Salad","Mixed greens, artichoke, calamata olives, tomatoes, onions, tossed in balsamic vinaigrette",7.99,\N,"dairy",1
+2,"Feta Mediterranean Salad","Mixed greens, artichoke, calamata olives, tomatoes, onions, tossed in balsamic vinaigrette","Salads",7.99,\N,"dairy",1
 2,"Crispy Chicken Salad","Romaine, grape tomatoes, onion, cheddar","Salads",8.59,\N,"dairy",0
 2,"Garden with Chicken Salad","Mixed greens, grape tomatoes, carrots, boccoli, onion","Salads",7.99,\N,\N,0
 2,"Grilled Vegetable with Couscous Salad","Mixed greens, zucchini, squash, onion, calamata olives, roasted red peppers, grape tomatoes, & crumbled goat cheese in balsamic vinaigrette dressing","Salads",7.99,\N,"dairy",1
@@ -179,7 +179,33 @@
 4,"Meze Platter","Hummus, bruschetta, black olive tapenade with organic greens and whole wheat pita","Salads",9.50,\N,\N,1
 4,"Hiyashi Chuka","Cold udon noodles with shisito dressing, cucumber, sprouts, nori, and your choice of chicken, shrimp, tofu, or steak","Salads",10.00,\N,\N,0
 4,"Tripple S","Chicken salad, tuna salad, egg salad, fresh fruit, organic greens, and baguette slices","Salads",10.00,\N,"dairy",0
-
-
-
-
+5,Garden Salad,"Spring mix, cucmber, red radish and tomatoes",Starters and Salads,3.95,\N,\N,2
+5,Miso Soup,,Starters and Salads,1.95,\N,gluten,1
+5,Seaweed Salad,,Starters and Salads,3.95,\N,\N,2
+5,Edamame,,Starters and Salads,3.95,\N,\N,2
+5,Season Scallop Salad,,Starters and Salads,3.95,\N,"shellfish, gluten",0
+5,Tuna Sashimi Bowl,"5pcs tuna with your choice of sushi rice or salad, a dressing and toppings",Sashimi Bowl,9.95,\N,\N,0
+5,Salmon Sashimi Bowl,"5pcs salmon with your choice of sushi rice or salad, a dressing and toppings",Sashimi Bowl,9.95,\N,\N,0
+5,Deluxe Sashimi Bowl,"4pcs tuna and 4pcs salmon with your choice of sushi rice or salad, a dressing and toppings",Sashimi Bowl,13.95,\N,\N,0
+5,California Roll,"Crab, avocado, cucumber",Sushi Rolls,6.25,\N,"shellfish, gluten",0
+5,Spicy Grilled Chicken Roll,"Grilled chicken, cucumber",Sushi Rolls,6.25,\N,gluten,0
+5,Veggie Roll,"Avocado, cucumber, pickled carrot",Sushi Rolls,6.25,\N,"shellfish, gluten",2
+5,Veggie Spring Roll,"Avocado, lettuce, carrot rolled with pickled radish and topped with cilantro",Sushi Rolls,6.25,\N,"shellfish, gluten",2
+5,Spicy Tuna Roll,"Spicy Tuna, cucumber",Sushi Rolls,7.49,\N,gluten,0
+5,Salmon Crunch Roll,"Salmon, avocado, cream cheese roll topped with rice crunch and eel sauce",Sushi Rolls,7.49,\N,gluten,0
+5,Creamy Veggie Roll,"Beet, avocado and lettuce roll topped with ricotta cheese sauce",Sushi Rolls,7.49,\N,gluten,1
+5,Green Rainbow Roll,California roll topped with avocado,Sushi Rolls,7.49,\N,gluten,0
+5,Maru Roll,"Crab salad, cucumber roll topped with salmon, avocado and a honey poppy seed sauce",Sushi Rolls,7.49,\N,"shellfish, gluten",0
+5,Shrimp Tempura,"Shrimp tempura, avocado, cucumber, crab salad and eel sauce",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Red Dragon,"Spicy tuna, cucumber topped with tuna, avocado, eel sauce, and spicy mayo",Sushi Rolls,8.49,\N,gluten,0
+5,Rainbow,"Crab, avocado, cucumber topped with tuna, ebi shrimp and avocado",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Salmon Rainbow,"Crab, avocado and cucumber roll topped with salmon and wasabi mayo",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Spider Roll,"Soft shell crab, avocado, lettuce, cucumber and eel sauce",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Duke Roll,"Shrimp tempura and cream cheese topped with spicy tuna, cilantro and sriracha sauce",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Dancing Eel Roll,"Crab, avocado and cucumber topped with eel, avocado and eel sauce",Sushi Rolls,8.49,\N,"shellfish, gluten",0
+5,Super Spider,"Lobster salad, soft shell crab, avocado, cucumber, lettuce roll topped with spicy tuna and eel sauce",Sushi Rolls,9.95,\N,"shellfish, gluten",0
+5,Gyotaku Special,"Crab, cucumber roll topped with salmon and peanut sauce",Sushi Rolls,9.95,\N,"shellfish, gluten",0
+5,Tuna Lover,"Spicy tuna, cucumber topped with seared tuna, jalapeno, eel sauce and sriracha",Sushi Rolls,9.95,\N,gluten,0
+5,Regular Sushi Bento,"Combination of nigiri, sushi rolls, edamame and seaweed salad 2pcs tuna and 2pcs salmon",Sushi Bento,12.95,\N,"shellfish, gluten",0
+5,Deluxe Sushi Bento,3 pcs tuna and 3 pcs salmon,Sushi Bento,14.95,\N,"shellfish, gluten",0
+5,Make Your Own Sushi,"Choose up to three insides, one topping and a sauce",Create Your Own,8.95,\N,gluten,0

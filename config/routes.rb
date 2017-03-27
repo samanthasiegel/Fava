@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/list_food', to:'posts#list_food'
   get '/food_item_profile', to:'posts#food_item_profile'
   get '/order', to:'posts#order'
-  post '/post_order', to:'posts#post_order'
+  get '/order_posted', to:'posts#create'
   get '/filter', to: 'posts#filter'
   get '/filter_by_cat', to: 'posts#filter_by_cat'
 

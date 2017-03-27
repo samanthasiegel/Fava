@@ -20,8 +20,8 @@ namespace :import do
 		filename = File.join Rails.root, "food_items.csv"
 		counter = 0;
 		CSV.foreach(filename) do |row|
-			restaurant_id, name, description, category, price, size, allergy_info, dietary_info = row
-			f = FoodItem.create(Restaurant_id: restaurant_id, food_name: name, description: description, category: category,
+			restaurant, food_name, description, category, price, size, allergy_info, dietary_info = row
+			f = FoodItem.create(Restaurant_id: restaurant, food_name: food_name, description: description, category: category,
 				price: price, size: size, allergy_info: allergy_info, dietary_info: dietary_info)
 			puts "#{food_name} - #{f.errors.full_messages.join(',')}" if f.errors.any?
 			counter += 1 if f.persisted?
