@@ -11,6 +11,9 @@
 <h2> Building </h2>
 <p> Install the dependencies, as specified in the Gemfile </p>
 ``` bundle install ```
+<p> Import the CSV files to initialize database tables </p>
+``` rake import:restaurants ```
+``` rake import:food_items ```
 
 <h2> Running </h2>
 ``` 
