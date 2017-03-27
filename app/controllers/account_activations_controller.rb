@@ -6,9 +6,12 @@ class AccountActivationsController < ApplicationController
 			fava_user.update_attribute(:activated, true)
 			fava_user.update_attribute(:activated_at, Time.zone.now)
 			log_in fava_user
-			redirect_to root_path
+			redirect_to '/timeline'
+		elsif fava_user && fava_user.activated
+			log_in fava_user
+			redirect_to '/timeline'
 		else
-			redirect_to signup_path
+			redirect_to root_url
 		end
 	end
 end

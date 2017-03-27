@@ -20,9 +20,10 @@ class SessionsController < ApplicationController
       if fava_user.activated?
     		# Log in and redirect
     		log_in fava_user
-    		redirect_to '/'
+        session[:fava_user_id] = fava_user.id
+    		redirect_to '/timeline'
       else
-        redirect_to signup_path
+        redirect_to confirm_path
       end
   	else
   		# Create error message
@@ -33,7 +34,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out if logged_in?
-    redirect_to root_path
+    redirect_to root_url
   end
 
 end

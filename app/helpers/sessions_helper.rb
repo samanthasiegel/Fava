@@ -11,7 +11,7 @@ module SessionsHelper
 	end
 
 	def current_fava_user
-		if(fava_user_id = session[fava_user.id])
+		if(fava_user_id = session[:fava_user_id])
 			@current_fava_user ||= FavaUser.find_by(id: fava_user_id)
 		elsif (fava_user_id = cookies.signed[:fava_user_id])
 			fava_user = FavaUser.find_by(id: fava_user_id)
@@ -27,7 +27,6 @@ module SessionsHelper
 	end
 
 	def log_out
-		forget(current_fava_user)
 		session.delete(:fava_user_id)
 		@current_fava_user = nil
 	end

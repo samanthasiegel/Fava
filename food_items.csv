@@ -62,10 +62,10 @@
 2,"Garden with Chicken Salad","Mixed greens, grape tomatoes, carrots, boccoli, onion","Salads",7.99,\N,\N,0
 2,"Grilled Vegetable with Couscous Salad","Mixed greens, zucchini, squash, onion, calamata olives, roasted red peppers, grape tomatoes, & crumbled goat cheese in balsamic vinaigrette dressing","Salads",7.99,\N,"dairy",1
 2,"Southwest Chicken Salad","Grilled chicken, seasonal greens, grape tomatoes, corn, black beans, avocado, chipotle ranch","Salads",8.19,\N,"dairy",0
-2,"Chili","With cheddar and onions","Soups",3.29,"Cup","dairy",0
-2,"Chili","With cheddar and onions","Soups",4.29,"Bowl","dairy",0
-2,"Tomato Bisque","With asiago croutons","Soups",3.29,"Cup","dairy, pork",0
-2,"Tomato Bisque","With asiago croutons","Soups",4.29,"Bowl","dairy, pork",0
+2,"Chili (Cup)","With cheddar and onions","Soups",3.29,"Cup","dairy",0
+2,"Chili (Bowl)","With cheddar and onions","Soups",4.29,"Bowl","dairy",0
+2,"Tomato Bisque (Cup)","With asiago croutons","Soups",3.29,"Cup","dairy, pork",0
+2,"Tomato Bisque (Bowl)","With asiago croutons","Soups",4.29,"Bowl","dairy, pork",0
 2,"Crock of Creamy French Onion","With melted swiss","Soups",4.29,\N,"dairy",1
 2,"Bleu Cheese Chips","","Sides",3.99,\N,"dairy",1
 2,"Onion Rings","","Sides",5.79,\N,"gluten",2
@@ -82,45 +82,45 @@
 2,"Chicken Caesar Wrap","Served with a cup of soup","Wraps",8.19,\N,"dairy, fish, gluten", 0
 2,"Chicken Salad Wrap","Served with a cup of soup","Wraps",8.19,\N,"dairy, gluten", 0
 2,"Buffalo Chicken Wrap","Served with Ranch or Bleu Cheese, and a cup of soup","Wraps",8.19,\N,"dairy, gluten",0
-2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",8.59,"8 inch","dairy, gluten",1
-2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",14.59,"12 inch","dairy, gluten",1
-2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",17.59,"16 inch","dairy, gluten",1
-2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",8.59,"8 inch","dairy, gluten",0
-2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",14.59,"12 inch","dairy, gluten",0
-2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",17.59,"14 inch","dairy, gluten",0
-2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",8.59,"8 inch","dairy, gluten", 1
-2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",14.59,"12 inch","dairy, gluten", 1
-2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",17.59,"14 inch","dairy, gluten", 1
-2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",8.59,"8 inch","dairy, gluten",0
-2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",14.59,"12 inch","dairy, gluten",0
-2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",17.59,"14 inch","dairy, gluten",0
-2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",8.59,"8 inch","dairy, gluten,",0
-2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",14.59,"12 inch","dairy, gluten,",0
-2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",17.59,"14 inch","dairy, gluten,",0
-2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
-2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
-2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
-2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
-2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
-2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
-2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
-2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
-2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
-2,"Portabello and Bacon Pizza","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",8.59,"8 inch","gluten, dairy", 0
-2,"Portabello and Bacon Pizza","Pesto-based pie with siago, carmelized onions, tomatoes","Pizza",14.59,"12 inch","gluten, dairy", 0
-2,"Portabello and Bacon Pizza","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",17.59,"14 inch","gluten, dairy", 0
-2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
-2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
-2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
-2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
-2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
-2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
-2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",8.59,"8 inch","gluten, dairy",1
-2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",14.59,"12 inch","gluten, dairy",1
-2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",17.59,"14 inch","gluten, dairy",1
-2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",8.59,"8 inch","gluten, dairy",0
-2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",14.59,"12 inch","gluten, dairy",0
-2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Five Cheese Pizza (8 inch)","Mozzarella, goat, parmesan, feta, bleu","Pizza",8.59,"8 inch","dairy, gluten",1
+2,"Five Cheese Pizza (12 inch)","Mozzarella, goat, parmesan, feta, bleu","Pizza",14.59,"12 inch","dairy, gluten",1
+2,"Five Cheese Pizza (14 inch)","Mozzarella, goat, parmesan, feta, bleu","Pizza",17.59,"16 inch","dairy, gluten",1
+2,"Meat Market Pizza (8 inch)","Sausage, pepperoni, beef, smoked bacon","Pizza",8.59,"8 inch","dairy, gluten",0
+2,"Meat Market Pizza (12 inch)","Sausage, pepperoni, beef, smoked bacon","Pizza",14.59,"12 inch","dairy, gluten",0
+2,"Meat Market Pizza (14 inch)","Sausage, pepperoni, beef, smoked bacon","Pizza",17.59,"14 inch","dairy, gluten",0
+2,"Farmer's Market Pizza (8 inch)","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",8.59,"8 inch","dairy, gluten", 1
+2,"Farmer's Market Pizza (12 inch)","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",14.59,"12 inch","dairy, gluten", 1
+2,"Farmer's Market Pizza (14 inch)","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",17.59,"14 inch","dairy, gluten", 1
+2,"Special Pizza (8 inch)","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",8.59,"8 inch","dairy, gluten",0
+2,"Special Pizza (12 inch)","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",14.59,"12 inch","dairy, gluten",0
+2,"Special Pizza (14 inch)","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",17.59,"14 inch","dairy, gluten",0
+2,"BBQ Chicken Pizza (8 inch)","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",8.59,"8 inch","dairy, gluten,",0
+2,"BBQ Chicken Pizza (12 inch)","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",14.59,"12 inch","dairy, gluten,",0
+2,"BBQ Chicken Pizza (14 inch)","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",17.59,"14 inch","dairy, gluten,",0
+2,"Artichoke and Bacon Pizza (8 inch)","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Artichoke and Bacon Pizza (12 inch)","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Artichoke and Bacon Pizza (14 inch)","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza (8 inch)","Pesto-based pie with sundried and roma tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza (12 inch)","Pesto-based pie with sundried and roma tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza (14 inch)","Pesto-based pie with sundried and roma tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza (8 inch)","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza (12 inch)","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza (14 inch)","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Portabello and Bacon Pizza (8 inch)","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",8.59,"8 inch","gluten, dairy", 0
+2,"Portabello and Bacon Pizza (12 inch)","Pesto-based pie with siago, carmelized onions, tomatoes","Pizza",14.59,"12 inch","gluten, dairy", 0
+2,"Portabello and Bacon Pizza (14 inch)","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",17.59,"14 inch","gluten, dairy", 0
+2,"Mediterranean Pizza (8 inch)","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Mediterranean Pizza (12 inch)","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Mediterranean Pizza (14 inch)","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza (8 inch)","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza (12 inch)","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza (14 inch)","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Caprese Pizza (8 inch)","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Caprese Pizza (12 inch)","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Caprese Pizza (14 inch)","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Southwest Chicken Pizza (8 inch)","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Southwest Chicken Pizza (12 inch)","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Southwest Chicken Pizza (14 inch)","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",17.59,"14 inch","gluten, dairy",0
 2,"Spicy Mac'N Cheese Bites","","Snacks",5.99,\N,"dairy",1
 2,"Fried Mozzarella","","Snacks",4.99,\N,"dairy",1
 2,"Jalapeño Cheddar Potato Bites","","Snacks",3.99,\N,"dairy",1
@@ -167,18 +167,18 @@
 4,"Grilled Cheese","Cheddar cheese on sour dough or whole wheat with your choice of ham, turkey, or bacon","Sandwiches",9.00,\N,"dairy, gluten",0
 4,"Black Angus Burger","Black angus beef on brioche roll with lettuce and tomato","Burgers",9.50,\N,"dairy, gluten",0
 4,"Morty's Reuben","Corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread. We can make it with turkey too!","Sandwiches",10,\N,"dairy, gluten",0
-4,"Grilled Chicken Sandwich","Marinated and seared, served on brioche roll with lettuce and tomato","Sandwiches",9.5,\N,"dairy, gluten",0
-4,"Salmon Burger","Made fresh with ginger and green onion on brioche roll with wasabi mayo","Sandwiches",9.5,\N,"gluten, fish, dairy",0
-4,"Pulled Pork BBQ Sandwich","NC Hickory smoked pork barbecue with our Eastern vingar sauce on brioche roll","Sandwiches",9,\N,"gluten",0
-4,"The Godfather","Cappicollo, salami, turkey, pepperoni, and mortadella with provolone and Italian dressing on a sub roll","Sandwiches",9.5,\N,"dairy, gluten",0
-4,"Veggie Single","Veggie burger with lettuce, cheese, onions, pickles, and Russian dressing on brioche roll","Burgers",9,\N,"dairy",1
-4,"Chopped Mexican Salad","Corn, tomatoes, black beans, cabbage, chopped romaine tossed with lime vinaigrette and ancho tortilla strips","Salads",9.5,\N,"gluten",1
-4,"E Tu, Caesar?!","Crispy romaine, parmesan cheese, creamy Caesar dressing an croutons","Salads",9,\N,"dairy, fish",0
-4,"Garden of Edens","Organic greens, tomatoes, cucumbers, broccoli, mushrooms, chick peas, carrots, red onion, pepperoncini and sunflower seeds with red wine vinaigrette","Salads",9,\N,\N,2
-4,"California Club","Crispy Romaine, tomato, bacon, turkey, avocado and croutons with Caesar dressing","Salads",10,\N,"dairy, fish",0
-4,"Meze Platter","Hummus, bruschetta, black olive tapenade with organic greens and whole wheat pita","Salads",9.5,\N,\N,1
-4,"Hiyashi Chuka","Cold udon noodles with shisito dressing, cucumber, sprouts, nori, and your choice of chicken, shrimp, tofu, or steak","Salads",10,\N,\N,0
-4,"Tripple S","Chicken salad, tuna salad, egg salad, fresh fruit, organic greens, and baguette slices","Salads",10,\N,"dairy",0
+4,"Grilled Chicken Sandwich","Marinated and seared, served on brioche roll with lettuce and tomato","Sandwiches",9.50,\N,"dairy, gluten",0
+4,"Salmon Burger","Made fresh with ginger and green onion on brioche roll with wasabi mayo","Sandwiches",9.50,\N,"gluten, fish, dairy",0
+4,"Pulled Pork BBQ Sandwich","NC Hickory smoked pork barbecue with our Eastern vingar sauce on brioche roll","Sandwiches",9.00,\N,"gluten",0
+4,"The Godfather","Cappicollo, salami, turkey, pepperoni, and mortadella with provolone and Italian dressing on a sub roll","Sandwiches",9.50,\N,"dairy, gluten",0
+4,"Veggie Single","Veggie burger with lettuce, cheese, onions, pickles, and Russian dressing on brioche roll","Burgers",9.00,\N,"dairy",1
+4,"Chopped Mexican Salad","Corn, tomatoes, black beans, cabbage, chopped romaine tossed with lime vinaigrette and ancho tortilla strips","Salads",9.50,\N,"gluten",1
+4,"E Tu, Caesar?!","Crispy romaine, parmesan cheese, creamy Caesar dressing an croutons","Salads",9.00,\N,"dairy, fish",0
+4,"Garden of Edens","Organic greens, tomatoes, cucumbers, broccoli, mushrooms, chick peas, carrots, red onion, pepperoncini and sunflower seeds with red wine vinaigrette","Salads",9.00,\N,\N,2
+4,"California Club","Crispy Romaine, tomato, bacon, turkey, avocado and croutons with Caesar dressing","Salads",10.00,\N,"dairy, fish",0
+4,"Meze Platter","Hummus, bruschetta, black olive tapenade with organic greens and whole wheat pita","Salads",9.50,\N,\N,1
+4,"Hiyashi Chuka","Cold udon noodles with shisito dressing, cucumber, sprouts, nori, and your choice of chicken, shrimp, tofu, or steak","Salads",10.00,\N,\N,0
+4,"Tripple S","Chicken salad, tuna salad, egg salad, fresh fruit, organic greens, and baguette slices","Salads",10.00,\N,"dairy",0
 
 
 

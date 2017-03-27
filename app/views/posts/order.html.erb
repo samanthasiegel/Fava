@@ -1,0 +1,37 @@
+<% provide(:title, "Order Request") %>
+<article id="main">
+	<header>
+		<h2>Request Delivery</h2>
+		<p>Where you can post a delivery request for others to see</p>
+	</header>
+	<section class="wrapper style5">
+		<div class="inner">
+			<% flash.each do |key, value| %>
+        		<div class="alert alert-<%= key %>"><%= value %></div>
+      		<% end %>
+			<%= form_for @post do |f| %>
+					<div class="row uniform">
+						<h4> What are you hungry for? </h4>
+						<div class="12u$">
+							<%= f.text_field :food_name, class: 'form-control', value: @food_item.food_name, :readonly => true%>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :restaurant_name, class: 'form-control', value: @restaurant.name, :readonly => true %>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :notes, class: 'form-control', placeholder:"Add ons? Sides? Notes?" %>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :tip, class: 'form-control', placeholder:"Tip $ amount" %>
+						</div>
+						<div class="12u$">
+							<ul class="actions">
+								<li><%= f.submit "Post", class: "special" %>
+							</ul>
+						</div>
+					</div>
+				<% end %>
+
+		</div>
+	</section>
+</article>

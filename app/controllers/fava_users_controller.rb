@@ -8,6 +8,7 @@ class FavaUsersController < ApplicationController
   # GET /fava_users.json
   def index
     @fava_users = FavaUser.all
+    fava_user = FavaUer.find_by_id(session[:fava_user_id])
   end
 
   # GET /fava_users/1
@@ -33,7 +34,7 @@ class FavaUsersController < ApplicationController
       if @fava_user.save
         UserMailer.account_activation(@fava_user).deliver_now
         flash.now[:info] = "Please check your email to activate your account."
-        format.html {redirect_to root_url}
+        format.html {redirect_to confirm_path}
       else
         format.html { render :new }
         format.json { render json: @fava_user.errors, status: :unprocessable_entity }
