@@ -6,22 +6,22 @@
 <p> Developed using Ruby on Rails, HTML, CSS, and JavaScript </p>
 
 <h2> Cloning </h2>
-``` git clone https://github.com/samanthasiegel/Fava.git ```
+git clone https://github.com/samanthasiegel/Fava.git
 
 <h2> Building </h2>
-<p> Install the dependencies, as specified in the Gemfile </p>
-``` bundle install ```
-<p> Import the CSV files to initialize database tables </p>
-``` rake import:restaurants ```
-``` rake import:food_items ```
+<p> Install the dependencies, as specified in the Gemfile: </p>
+<p> bundle install </p>
+<p> Import the CSV files to initialize database tables: </p>
+<p> rake import:restaurants </p>
+<p>rake import:food_items</p>
 
 <h2> Running </h2>
-``` 
+<p>
 rails server 
-``` 
+<p>
 
 <h2> Troubleshooting </h2>
 If receiving errors about unimplemented migrations:
-``` rails db:migrate ```
+<p>rails db:migrate <p>
 or
-``` bundle exec rails db:migrate ```
+<p> bundle exec rails db:migrate </p>
