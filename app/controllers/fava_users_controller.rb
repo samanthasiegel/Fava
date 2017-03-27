@@ -32,7 +32,7 @@ class FavaUsersController < ApplicationController
     respond_to do |format|
       if @fava_user.save
         UserMailer.account_activation(@fava_user).deliver_now
-        flash[:info] = "Please check your email to activate your account."
+        flash.now[:info] = "Please check your email to activate your account."
         format.html {redirect_to root_url}
       else
         format.html { render :new }

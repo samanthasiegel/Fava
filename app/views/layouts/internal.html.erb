@@ -12,9 +12,17 @@
 
   <body>
   	<div id="page-wrapper" style="margin-top:-60px;">
-	  	
+	  	<%= render 'layouts/header' %>
 	   	<%= yield %>
    	</div>
     <%= render 'layouts/footer' %>
+
+    
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.scrollex.min.js"></script>
+  <script src="/js/jquery.scrolly.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/main.js"></script> 
   </body>
 </html>

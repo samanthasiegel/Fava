@@ -1,10 +1,185 @@
-20,"Black Bean Tortilla Soup","Crispy tortilla strips, sour cream","Soups","3.85",\N,\N,
-20,"DKH Homestyle Chili","Beef, crispy tortilla strips, sour cream","Soups","6.25",\N,\N,0
-20,"Southwest Chopped Salad","Romaine, black beans, corn, tomatoes, queso fresco, creamy avocado dressing","Salad","7.95",\N,\N,1
-20,"Caesar Salad", "Romaine, parmesan, croutons, house caesar", "Salads", "7.75",\N,"gluten, eggs, fish",0
-20,"Greek Salad","Romaine, tomatoes, kalamata olives, red onion, feta, greek dressing","Salads","7.75",\N,"dairy",1
-20,"DKH Classic Burger","Cheddar, lettuce, tomato, onion","Burgers","8.75",\N,"dairy, gluten",0
-20,"Sloppy Burger","Cheddar, bacon, thousand-island, guacamole","Burgers","9.45",\N,"dairy, gluten",0
-20,"Southwestern Burger","Cheddar, jalapeño, guacamole, crispy tortilla strips","Burgers","9.95",\N,"dairy, gluten",0
-20,"BBQ Burger","Bacon, cheddar, onion rings, BBQ sauce","Burgers","9.50", \N, "dairy, gluten", 0
-20,"Krafthouse Krazy Burger","Cheddar, provolone, bacon, fried egg, onion rings","Burgers","9.50", \N, "dairy, gluten", 0
+1,"Black Bean Tortilla Soup","Crispy tortilla strips, sour cream","Soups",3.85,\N,\N,0
+1,"DKH Homestyle Chili","Beef, crispy tortilla strips, sour cream","Soups",6.25,\N,\N,0
+1,"Southwest Chopped Salad","Romaine, black beans, corn, tomatoes, queso fresco, creamy avocado dressing","Salads",7.95,\N,\N,1
+1,"Greek Salad","Romaine, tomatoes, kalamata olives, red onion, feta, greek dressing","Salads",7.75,\N,"dairy",1
+1,"DKH Classic Burger","Cheddar, lettuce, tomato, onion","Burgers",8.75,\N,"dairy, gluten",0
+1,"Sloppy Burger","Cheddar, bacon, thousand-island, guacamole","Burgers",9.45,\N,"dairy, gluten",0
+1,"Southwestern Burger","Cheddar, jalapeño, guacamole, crispy tortilla strips","Burgers",9.95,\N,"dairy, gluten",0
+1,"BBQ Burger","Bacon, cheddar, onion rings, BBQ sauce","Burgers",9.50,\N,"dairy, gluten",0
+1,"Krafthouse Krazy Burger","Cheddar, provolone, bacon, fried egg, onion rings","Burgers",9.50,\N,"dairy, gluten",0
+1,"Ground Beef Tacos","Pico de gallo, sour cream","Tacos",8.55,\N,"dairy",0
+1,"Grilled Chicken Tacos","Piceo de gallo, sour cream","Tacos",8.65,\N,"dairy",0
+1,"Grilled Fish Tacos","slaw, pico de gallo, sour cream","Tacos",9.95,\N,"dairy, fish",0
+1,"Reuben Sandwich","Corned beef, sauerkraut, swiss, thousand island, rye bread","Sandwiches",10.00,\N,"dairy, gluten",0
+1,"DKH Turkey Double Decker","Bacon, cheddar, lettuce, tomato, onion, mayo, sourdough","Sandwiches",9.25,\N,"dairy, gluten",0
+1,"Crispy Chicken Sandwich","Bacon, cheddar, grilled onion, ranch, sriracha mayo, bun","Sandwiches",9.35,\N,"dairy, gluten",0
+1,"Krafthouse Cheese Steak","Provoloine, grilled peppers and onions, mayo, grilled sourdough","Sandwiches",9.45,\N,"dairy, gluten",0
+1,"Grilled Pimento Cheese Sandwich","Crispy bacon, tomato, grilled sourdough","Sandwiches",8.95,\N,"dairy, gluten",0
+1,"Chocolate Brownie","Chocolate sauce, vanilla ice cream","Desserts",6.00,\N,"dairy, eggs",1
+1,"Jumbo Rice Krispy Treat","Rice krispies, marshmallows","Desserts",3.00,\N,\N,1
+1,"Sweet Potato Tots","Sweet fried potatoes","Snacks",4.25,\N,\N,2
+1,"French Fries","Fried potatoes","Snacks",4.25,\N,\N,2
+1,"Cheese Quesadilla","Sour cream, pico de gallo","Snacks",6.55,\N,"dairy, gluten",1
+1,"Wings","Chicken wings, hot sauce","Chicken",7.85,\N,"dairy, fish, shellfish, treenuts, peanuts, soybeans",0
+1,"Chicken Tenders","Chicken, breadcrumbs","Chicken",6.85,\N,"dairy, gluten",0
+1,"Nachos","Cheddar, black beans, jalapeños, pico de gallo, sour cream","Snacks",8.35,\N,"dairy",1
+1,"Tortilla Chips & Salsa","Chips, salsa","Snacks",3.75,\N,"dairy",1
+1,"Soft Pretzel","Pretzel, honey mustard","Snacks",3.00,\N,\N,2
+1,"Boylan Sodas","Made with cane sugar","Drinks",3.00,\N,\N,1
+1,"Smart Water","Water","Drinks",2.50,\N,\N,2
+1,"Dasani Water","Water","Drinks",1.75,\N,\N,2
+1,"Fresh Brewed Iced Tea","Iced tea","Drinks",3.00,\N,\N,2
+2,"Loop Burger","Lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",7.59,\N,"gluten",0
+2,"Loop Cheese Burger","Cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",8.39,\N,"dairy, gluten",0
+2,"Great American Cheese Burger","American cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",8.39,\N,"dairy, gluten",0
+2,"Bacon Cheddar Burger","Bacon, cheddar cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",9.39,\N,"dairy, gluten",0
+2,"Mushroom Swiss Burger","Mushrooms, swiss cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",9.39,\N,"dairy, gluten",0
+2,"BBQ Bacon Cheddar","Grilled onion, bacon, chessar cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",9.49,\N,"dairy, gluten",0
+2,"Cajun & Jack Cheese Burger","Honey dijon, jack cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",8.49,\N,"dairy, gluten",0
+2,"Southwest Burger","Pepper jack, jalapeños, avocado, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",8.49,\N,"dairy, gluten",0
+2,"Turkey Burger","Grilled with lettuce, tomato, mayo, and onion served with fried, chips, fruit, or broccoli","Burgers",8.79,\N,"dairy, gluten",0
+2,"Chicken Tender Platter","Plate of chicken fingers","Chicken",6.99,"Three pieces","gluten",0
+2,"Chicken Tender Platter","Plate of chicken fingers","Chicken",9.99,"Five pieces","gluten",0
+2,"Grilled Chicken & Jack Cheese","On Cheddar, Swiss, or Bleu","Chicken",8.19,\N,"gluten, dairy",0
+2,"BBQ Bacon Cheddar Chicken","With grilled onions","Chicken",9.49,\N,"gluten, dairy",0
+2,"Cajun & Jack Cheese Chicken","With honey dijon","Chicken",8.19,\N,"gluten, dairy",0
+2,"Southwest Chicken","With pepper jack cheese, jalapeños, & avocado","Chicken",8.39,\N,"dairy",0
+2,"Pesto Chicken Ciabatta","Oven baked with basil pesto, marinara, melted mozzarella, and asiago cheese","Chicken",8.99,\N,"gluten, dairy, tree nuts, pine nuts",0
+2,"Grilled Salmon Sandwich","With lemon dill mayo","Fish",10.29,\N,"gluten, fish, dairy",0
+2,"Cajun Fish or Shrimp Wrap","Cajun whitefish filet or shrimp wrapped in a tortilla with honey dijon, lettuce, and tomato","Fish",9.99,\N,"fish",0
+2,"Grilled Fish Sandwich","Grilled whitefish-cajun with honey dijon or lemon pepper with dill mayo","Fish",9.99,\N,"gluten, dairy, fish",0
+2,"Black Bean Burger","Spicy with lettuce, tomato, onion & fat free ranch","Sandwiches",8.29,\N,"gluten, dairy",1
+2,"Veggie Melt Ciabatta","Oven baked with portabello, zucchini, squash & roasted red peppers, calamata olives with melted mozzarella & crumbled goat cheese","Sandwiches",8.49,\N,"gluten, dairy",1
+2,"Grilled Portabello Sandwich","With grilled onions, garlic mayonnaise, & jack cheese on a wheat bun","Sandwiches",8.49,\N,"gluten, dairy",1
+2,"Grilled Vegetable Sandwich","Grilled portabello, roasted red pepper, onion & zucchini & herbed goat cheese spread with balsamic vinaigrette dressing","Sandwiches",9.29,\N,"gluten, dairy",1
+2,"Walnut Gorgonzola Salad","Mixed greens, grape & sundried tomatoes, onion, tossed in balsamic vinaigrette","Salads",7.99,\N,"nuts",1
+2,"Asian Chicken Salad","Romaine, cabbage, carrots, crunchy walnuts & noodles, tossed in peanut honey lime dressing","Salads",8.29,\N,"peanuts, tree nuts",0
+2,"Crunchy Broccoli Salad","Romaine, grape tomatoes, crunchy walnyts & noodles, tossed in sweet red wine vinaigrette","Salads",7.99,\N,"nuts",2
+2,"Goat Cheese Salad","Romaine, walnuts, dried cranberries, oranges, onions, tossed in shallot vinaigrette","Salads",8.19,\N,"nuts",3
+2,"Caesar with Chicken Salad","Caesar salad with chicken strips","Salads",8.29,\N,"dairy, fish",0
+2,"Feta Mediterranean Salad","Mixed greens, artichoke, calamata olives, tomatoes, onions, tossed in balsamic vinaigrette",7.99,\N,"dairy",1
+2,"Crispy Chicken Salad","Romaine, grape tomatoes, onion, cheddar","Salads",8.59,\N,"dairy",0
+2,"Garden with Chicken Salad","Mixed greens, grape tomatoes, carrots, boccoli, onion","Salads",7.99,\N,\N,0
+2,"Grilled Vegetable with Couscous Salad","Mixed greens, zucchini, squash, onion, calamata olives, roasted red peppers, grape tomatoes, & crumbled goat cheese in balsamic vinaigrette dressing","Salads",7.99,\N,"dairy",1
+2,"Southwest Chicken Salad","Grilled chicken, seasonal greens, grape tomatoes, corn, black beans, avocado, chipotle ranch","Salads",8.19,\N,"dairy",0
+2,"Chili","With cheddar and onions","Soups",3.29,"Cup","dairy",0
+2,"Chili","With cheddar and onions","Soups",4.29,"Bowl","dairy",0
+2,"Tomato Bisque","With asiago croutons","Soups",3.29,"Cup","dairy, pork",0
+2,"Tomato Bisque","With asiago croutons","Soups",4.29,"Bowl","dairy, pork",0
+2,"Crock of Creamy French Onion","With melted swiss","Soups",4.29,\N,"dairy",1
+2,"Bleu Cheese Chips","","Sides",3.99,\N,"dairy",1
+2,"Onion Rings","","Sides",5.79,\N,"gluten",2
+2,"Fries","","Sides",1.99,"Small",\N,2
+2,"Fries","","Sides",3.99,"Large",\N,2
+2,"Steamed Broccoli","","Sides",1.99,\N,\N,2
+2,"Side Caesar Salad","","Sides",3.89,\N,"dairy, fish",0
+2,"Side Garden Salad","","Sides",3.39,\N,\N,1
+2,"Homemade Chips","","Sides",1.29,"Small",\N, 2
+2,"Homemade Chips","","Sides",2.59,"Small",\N,2
+2,"Fresh Fruit","","Sides",2.59,\N,\N,2
+2,"Salmon","","Sides",5.99,\N,"fish",0
+2,"Asian Chicken Wrap","Served with a cup of soup","Wraps",8.19,\N,"dairy, gluten",0
+2,"Chicken Caesar Wrap","Served with a cup of soup","Wraps",8.19,\N,"dairy, fish, gluten", 0
+2,"Chicken Salad Wrap","Served with a cup of soup","Wraps",8.19,\N,"dairy, gluten", 0
+2,"Buffalo Chicken Wrap","Served with Ranch or Bleu Cheese, and a cup of soup","Wraps",8.19,\N,"dairy, gluten",0
+2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",8.59,"8 inch","dairy, gluten",1
+2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",14.59,"12 inch","dairy, gluten",1
+2,"Five Cheese Pizza","Mozzarella, goat, parmesan, feta, bleu","Pizza",17.59,"16 inch","dairy, gluten",1
+2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",8.59,"8 inch","dairy, gluten",0
+2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",14.59,"12 inch","dairy, gluten",0
+2,"Meat Market Pizza","Sausage, pepperoni, beef, smoked bacon","Pizza",17.59,"14 inch","dairy, gluten",0
+2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",8.59,"8 inch","dairy, gluten", 1
+2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",14.59,"12 inch","dairy, gluten", 1
+2,"Farmer's Market Pizza","Mushrooms, green peppers, onions, calamata olives, and artichokes","Pizza",17.59,"14 inch","dairy, gluten", 1
+2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",8.59,"8 inch","dairy, gluten",0
+2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",14.59,"12 inch","dairy, gluten",0
+2,"Special Pizza","Sausage, pepperoni, onions, green pepper, and mushrooms","Pizza",17.59,"14 inch","dairy, gluten",0
+2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",8.59,"8 inch","dairy, gluten,",0
+2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",14.59,"12 inch","dairy, gluten,",0
+2,"BBQ Chicken Pizza","Pesto-based pie with roasted garlic, tomatoes, carmelized onions","Pizza",17.59,"14 inch","dairy, gluten,",0
+2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Artichoke and Bacon Pizza","Pesto-based pie with roasted garlic, calamata olives, portabello, and tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Sausage and Goat Cheese Pizza","Pesto-based pie with sundried and roma tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Spicy Chicken Cilantro Pizza","Pesto-based pie with jalapeño, roasted garlic, carmelized onions, roasted red peppers, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Portabello and Bacon Pizza","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",8.59,"8 inch","gluten, dairy", 0
+2,"Portabello and Bacon Pizza","Pesto-based pie with siago, carmelized onions, tomatoes","Pizza",14.59,"12 inch","gluten, dairy", 0
+2,"Portabello and Bacon Pizza","Pesto-based pie with asiago, carmelized onions, tomatoes","Pizza",17.59,"14 inch","gluten, dairy", 0
+2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Mediterranean Pizza","Pesto-based pie with feta, spinach, artichoke, calamata olives, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Grilled Veggie Pizza","Pesto-based pie with zucchini, squash, onion, portabello, calamata olives, roasted red pepper, tomatoes","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",8.59,"8 inch","gluten, dairy",1
+2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",14.59,"12 inch","gluten, dairy",1
+2,"Caprese Pizza","Pesto-based pie with roma tomatoes and basil chiffonade","Pizza",17.59,"14 inch","gluten, dairy",1
+2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",8.59,"8 inch","gluten, dairy",0
+2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",14.59,"12 inch","gluten, dairy",0
+2,"Southwest Chicken Pizza","Pesto-based pie with black beans, sweet cord, jalapeño, roma tomatoes, and cilantro","Pizza",17.59,"14 inch","gluten, dairy",0
+2,"Spicy Mac'N Cheese Bites","","Snacks",5.99,\N,"dairy",1
+2,"Fried Mozzarella","","Snacks",4.99,\N,"dairy",1
+2,"Jalapeño Cheddar Potato Bites","","Snacks",3.99,\N,"dairy",1
+2,"Cheesy Breadsticks","","Snacks",3.79,\N,"gluten, dairy",1
+2,"Chili Cheese Fries","","Snacks",5.99,\N,"gluten-free; dairy",0
+2,"Cheese Fries","","Snacks",4.99,\N,"gluten-free; dairy",1
+2,"Sweet Potato Fries","","Snacks",5.19,\N,"gluten-free",1
+2,"Fried Picke Chips","","Snacks",4.99,\N,\N,1
+2,"Bowtie Shrimp Pasta","Sautéed shrimp in tomato cream sauce with asiago cheese","Pasta",10.99,\N,"fish, dairy",0
+2,"Grilled Veggia Bowtie Pasta","Grilled zucchini, squash, roasted red peppers, broccoli & asiago cheese tossed with a tomato cream sauce","Pasta",9.99,\N,"dairy",1
+2,"Cajun Chicken Alfredo","Strips of grilled chicken breast and broccoli florettes served on top of bowtie pasta in a cajun alfredo sauce","Pasta",9.99,\N,"dairy",0
+2,"Vanilla Milkshake","Hand-dipped shake","Desserts",3.99,\N,"gluten free; dairy",1
+2,"Chocolate Milkshake","Hand-dipped shake","Desserts",3.99,\N,"gluten free; dairy",1
+2,"Strawberry Milkshake","Hand-dipped shake","Desserts",3.99,\N,"gluten free; dairy",1
+2,"Oreo Milkshake","Hand-dipped shake","Desserts",4.09,\N,"dairy",1
+2,"Butterfinger Milkshake","Hand-dipped shake","Desserts",4.09,\N,"dairy",1
+2,"Strawberry-Banana Milkshake","Hand-dipped shake","Desserts",4.09,\N,"gluten free; dairy",1
+2,"Reese's Peanut Butter Milkshake","Hand-dipped shake","Desserts",4.09,\N,"gluten free; dairy",1
+2,"Fudge Brownie Sundae","","Desserts",4.99,\N,"dairy",1
+2,"Hot Lava Cake","","Desserts",4.99,\N,"dairy",1
+2,"Ice Cream Loopwich","","Desserts",3.50,\N,"dairy",1
+2,"Cookie Sundae","","Desserts",4.49,\N,"dairy",1
+2,"Freshly Baked Cookies","","Desserts",1.25,\N,\N,1
+2,"Jumbo Chicken Wings","Tossed in your choice of buffalo, honey buffalo, teriyaki, r chipotle BBQ served wih a side of ranch or bleu cheese and celery","Chicken",9.49,\N,"dairy",0
+2,"Chili Cheese Dog","Jumbo all beef hot dog with homemade chili, cheddar cheese, and onions served with your choice of side","Burgers",6.99,\N,"dairy",0
+2,"Chicago Dog","Jumbo all beef hot dog with relish, pickles, tomatoes, pepperoncini, onions, and mustard served with your choice of sice","Burgers",6.99,\N,"dairy",0
+2,"Grilled Tofu Sandwich","Served with spinash, grilled red pepper, and grilled onion on a wheat bun with your choice of side. Made in lemon juice and rosemary","Sandwiches",7.69,\N,"dairy, gluten",1
+2,"Perrier Sparkling Mineral Water","","Drinks",2.49,\N,\N,2
+2,"Propel Berry Fitness Water","","Drinks",1.99,\N,\N,2
+2,"San Pellegrino Sparkling Water","","Drinks",2.79,\N,\N,2
+2,"Bottled Water","","Drinks",1.79,\N,\N,2
+2,"20 Oz Bottled Soda","","Drinks",1.79,\N,\N,2
+2,"Minute Maid Juice","","Drinks",1.99,\N,\N,2
+2,"Vitamin Water","","Drinks",2.49,\N,\N,2
+2,"Monster Energy","","Drinks",3.00,\N,\N,1
+2,"Carrot Cake","","Desserts",3.99,\N,"dairy",1
+2,"NY Cheesecake","","Desserts",3.99,\N,"dairy",1
+2,"Red Velvet Cake","","Desserts",3.99,\N,\N,1
+2,"Chocolate Cake","","Desserts",4.79,\N,\N,1
+2,"Fruit Cup","","Snacks",2.59,\N,\N,2
+2,"Grape Cup","","Snacks",2.29,\N,\N,2
+2,"Strawberry Cup","","Snacks",2.99,\N,\N,2
+2,"Pineapple Cup","","Snacks",2.99,\N,\N,2
+4,"Grilled Cheese","Cheddar cheese on sour dough or whole wheat with your choice of ham, turkey, or bacon","Sandwiches",9.00,\N,"dairy, gluten",0
+4,"Black Angus Burger","Black angus beef on brioche roll with lettuce and tomato","Burgers",9.50,\N,"dairy, gluten",0
+4,"Morty's Reuben","Corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread. We can make it with turkey too!","Sandwiches",10,\N,"dairy, gluten",0
+4,"Grilled Chicken Sandwich","Marinated and seared, served on brioche roll with lettuce and tomato","Sandwiches",9.5,\N,"dairy, gluten",0
+4,"Salmon Burger","Made fresh with ginger and green onion on brioche roll with wasabi mayo","Sandwiches",9.5,\N,"gluten, fish, dairy",0
+4,"Pulled Pork BBQ Sandwich","NC Hickory smoked pork barbecue with our Eastern vingar sauce on brioche roll","Sandwiches",9,\N,"gluten",0
+4,"The Godfather","Cappicollo, salami, turkey, pepperoni, and mortadella with provolone and Italian dressing on a sub roll","Sandwiches",9.5,\N,"dairy, gluten",0
+4,"Veggie Single","Veggie burger with lettuce, cheese, onions, pickles, and Russian dressing on brioche roll","Burgers",9,\N,"dairy",1
+4,"Chopped Mexican Salad","Corn, tomatoes, black beans, cabbage, chopped romaine tossed with lime vinaigrette and ancho tortilla strips","Salads",9.5,\N,"gluten",1
+4,"E Tu, Caesar?!","Crispy romaine, parmesan cheese, creamy Caesar dressing an croutons","Salads",9,\N,"dairy, fish",0
+4,"Garden of Edens","Organic greens, tomatoes, cucumbers, broccoli, mushrooms, chick peas, carrots, red onion, pepperoncini and sunflower seeds with red wine vinaigrette","Salads",9,\N,\N,2
+4,"California Club","Crispy Romaine, tomato, bacon, turkey, avocado and croutons with Caesar dressing","Salads",10,\N,"dairy, fish",0
+4,"Meze Platter","Hummus, bruschetta, black olive tapenade with organic greens and whole wheat pita","Salads",9.5,\N,\N,1
+4,"Hiyashi Chuka","Cold udon noodles with shisito dressing, cucumber, sprouts, nori, and your choice of chicken, shrimp, tofu, or steak","Salads",10,\N,\N,0
+4,"Tripple S","Chicken salad, tuna salad, egg salad, fresh fruit, organic greens, and baguette slices","Salads",10,\N,"dairy",0
+
+
+
+

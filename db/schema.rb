@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170326233807) do
+ActiveRecord::Schema.define(version: 20170327041955) do
 
   create_table "fava_users", force: :cascade do |t|
     t.string   "first_name"
@@ -31,11 +31,24 @@ ActiveRecord::Schema.define(version: 20170326233807) do
     t.string  "food_name"
     t.string  "description"
     t.string  "category"
-    t.string  "price"
+    t.float   "price"
     t.string  "size"
     t.string  "allergy_info"
     t.integer "dietary_info"
     t.index ["Restaurant_id"], name: "index_food_items_on_Restaurant_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer  "poster"
+    t.integer  "claimer"
+    t.integer  "food_item"
+    t.integer  "restaurant"
+    t.decimal  "cost"
+    t.decimal  "tip"
+    t.string   "notes"
+    t.integer  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
