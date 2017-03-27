@@ -13,7 +13,9 @@
 ``` bundle install ```
 
 <h2> Running </h2>
-``` rails server ```
+``` 
+rails server 
+```
 
 <h2> Troubleshooting </h2>
 If receiving errors about unimplemented migrations:
