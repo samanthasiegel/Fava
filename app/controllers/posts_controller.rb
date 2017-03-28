@@ -64,10 +64,15 @@ class PostsController < ApplicationController
   def order
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+        if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
           @post = Post.new
-
+        elsif post_params[:food_name] != nil
+          raise "error"
+        else
+          raise "error"
+        end
       else
         redirect_to root_path
       end
@@ -75,9 +80,17 @@ class PostsController < ApplicationController
 
 
   def create
-      flash.now[:info] = "Your request has been posted!"
+      if post_params[:food_name] != nil
+        @restaurant = Restaurant.find_by_id(post_params[:restaurant_id])
+        @food_item = FoodItem.find_by_id(post_params[:food_item_id])
+        @post = Post.new
+      else
+        raise "error"
+      end
       respond_to do |format|
-        format.html {redirect_to order_path}
+        flash.now[:info] = "Your request has been posted"
+        flash.keep
+        format.html {redirect_to timeline_path}
       end
 
    #  restaurant_id = Restaurant.where(:name => params[:restaurant_name])
@@ -91,7 +104,7 @@ class PostsController < ApplicationController
 
 
   def post_params
-      params.require(:post).permit(:food_name, :restaurant_name, :notes, :tip)
+      params.require(:post).permit(:food_item_id, :restaurant_id, :food_name, :restaurant_name, :notes, :tip)
 
   end
 

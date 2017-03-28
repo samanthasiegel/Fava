@@ -4,6 +4,13 @@
             <header>
               <h2>Timeline</h2>
               <p>Where you can scroll through and accept other users' posts</p>
+              <p>
+                <% if flash[:info] %>
+                    <%= flash[:info] %>
+                <% else %>
+                    <%= "boom" %>
+                <% end <%>
+              </p>
             </header>
             <section class="wrapper style5">
               <div class="inner">

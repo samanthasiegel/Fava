@@ -9,9 +9,15 @@
 			<% flash.each do |key, value| %>
         		<div class="alert alert-<%= key %>"><%= value %></div>
       		<% end %>
-			<%= form_for @post, :url => url_for(:controller => 'posts', :action => 'create') do |f| %>
+			<%= form_for(@post) do |f| %>
 					<div class="row uniform">
 						<h4> What are you hungry for? </h4>
+						<div class="12u$">
+							<%= f.text_field :food_item_id, class: 'form-control', value: @food_item.id, :readonly => true%>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :restaurant_id, class: 'form-control', value: @restaurant.id, :readonly => true%>
+						</div>
 						<div class="12u$">
 							<%= f.text_field :food_name, class: 'form-control', value: @food_item.food_name, :readonly => true%>
 						</div>
@@ -26,7 +32,7 @@
 						</div>
 						<div class="12u$">
 							<ul class="actions">
-								<li><%= f.submit "Post", class: "special" %>
+								<li><%=f.submit "Post", class: "special" %></li>
 							</ul>
 						</div>
 					</div>

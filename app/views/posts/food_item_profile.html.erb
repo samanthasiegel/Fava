@@ -2,7 +2,7 @@
 
 <article id="main">
 	<header>
-		<h2>Food Information </h2>
+		<h2>Food Information</h2>
 			<section class="wrapper style5">
 					<div class="inner">
 						<h3><%=@food_item.food_name %></h3>
@@ -17,7 +17,9 @@
                 			<p><span class="icon fa-usd"> <%= @food_item.price %></span> </p>
                			</p>
 					</div>
-					<button class="special" href="#">Request Order</button>
+					<button class="special" href="#">
+                        <%= link_to "Request Order", order_path(food_item: @food_item) %>
+                    </button>
 			</section>
 	</header>
 </article>
