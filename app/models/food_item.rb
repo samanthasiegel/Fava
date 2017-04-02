@@ -1,4 +1,5 @@
 class FoodItem < ApplicationRecord
+	belongs_to :restaurant
 	validates :food_name, presence:true
 	validates :price, presence:true, :numericality => true
 	validates :category, presence:true
@@ -13,5 +14,7 @@ class FoodItem < ApplicationRecord
 			errors.add(:dietary_info, "invalid dietary info code submitted incorrectly")
 		end
 	end
+
+
 
 end

@@ -1,4 +1,5 @@
 class Restaurant < ApplicationRecord
+	has_many :food_items
 	validates :name, presence: true, uniqueness: {case_sensitive: false}
 	validates :location, presence: true
 	validates :open_hour, presence:true, length: {is: 4}
