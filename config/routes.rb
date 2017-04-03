@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   get '/timeline', to: 'requests#index'
-  # get '/post', to:'posts#new'
   get '/list', to:'requests#list_restaurants'
   get '/list_food', to:'requests#list_food'
   get '/food_item_profile', to:'requests#food_item_profile'
