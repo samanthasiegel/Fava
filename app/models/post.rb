@@ -5,26 +5,28 @@ class Post < ApplicationRecord
     self.timestamp = DateTime.now
   end
   # Rails automatically creates id
-  belongs_to :poster, class_name: 'fava_user'
+  has_one :poster
   validates :poster, presence: true
-  #belongs_to :claimer, class_name: 'fava_user', optional: true, , -> { where claimer != poster }
-  has_many :food_item
+  belongs_to :claimer, class_name: 'fava_user', optional: true
+  has_one :food_item
   validates :food_item, presence: true # Change to has_one if we want to limit to one item for each order?
-  has_one :restaurant
-  validates :food_item, presence: true
-  validates :cost, presence: true, numericality: true
   validates :tip, numericality: true
   validates :post_timestamp, presence: true
   validates :status, presence: true
   validate :status_range
   validates :notes, length: { maximum: 250 }
+  validate :poster_claimer_distinct
 
   def status_range
     errors.add(:status, 'status must be in range 0-4 inclusive') if (status < 0 || status > 4)
   end
 
   def poster_claimer_distinct
-    errors.add(:usersIndistinct, "poster can't be claimer") if poster == claimer
+    errors.add(:usersIndistinct, "poster can't be claimer") if claimer != nil and poster == claimer
+  end
+
+  def get_food_name
+    return FoodItem.find_by_id(:food_item_id)
   end
 
 

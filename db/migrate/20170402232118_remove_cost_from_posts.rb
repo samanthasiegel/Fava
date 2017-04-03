@@ -1,0 +1,5 @@
+class RemoveCostFromPosts < ActiveRecord::Migration[5.0]
+  def change
+    remove_column :posts, :cost
+  end
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327041955) do
+ActiveRecord::Schema.define(version: 20170403030149) do
 
   create_table "fava_users", force: :cascade do |t|
     t.string   "first_name"
@@ -42,13 +42,29 @@ ActiveRecord::Schema.define(version: 20170327041955) do
     t.integer  "poster"
     t.integer  "claimer"
     t.integer  "food_item"
-    t.integer  "restaurant"
-    t.decimal  "cost"
     t.decimal  "tip"
     t.string   "notes"
     t.integer  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "fava_user_id"
+    t.integer  "food_item_id"
+    t.index ["fava_user_id"], name: "index_posts_on_fava_user_id"
+    t.index ["food_item_id"], name: "index_posts_on_food_item_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "fava_user_id"
+    t.integer  "food_item_id"
+    t.float    "tip"
+    t.string   "notes"
+    t.string   "location"
+    t.integer  "status"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "claimer"
+    t.index ["fava_user_id"], name: "index_requests_on_fava_user_id"
+    t.index ["food_item_id"], name: "index_requests_on_food_item_id"
   end
 
   create_table "restaurants", force: :cascade do |t|

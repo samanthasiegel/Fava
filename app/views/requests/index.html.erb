@@ -7,23 +7,21 @@
               <p>
                 <% if flash[:info] %>
                     <%= flash[:info] %>
-                <% else %>
-                    <%= "boom" %>
-                <% end <%>
+                <% end %>
               </p>
             </header>
             <section class="wrapper style5">
 
               <div class="inner">
-                <% if !@posts.nil? %>
-                    <% @posts.each do |p| %>
+                <% if !@requests.nil? %>
+                    <% @requests.each do |r| %>
                         <img src='https://studentaffairs.duke.edu/sites/default/files/u110/Sammi%20.jpg' style="float:left; height:100px; width:100px; border-radius: 50%; margin-right: 20px;" />
-                        <h3><%= @p.get_name %></h3>
-                        <p> Deliver to: <a href="#" style="font-weight:bold;">Sammi Siegel</a> at Fourth floor Perkins </p>
-                        <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> Pitchforks 
+                        <h3> <%= r.get_food_name %> </h3>
+                        <p> Deliver to: <a href="#" style="font-weight:bold;"><%= r.get_user_name %></a> at <%= r.location %> </p>
+                        <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> <%= r.get_restaurant_name %>
                         <span class="icon fa-plus" style="margin-left:30px;"> Add on avocado </span> 
                         <span class="icon fa-cutlery" style="margin-left:30px;"> Side of tots </span> 
-                        <span class="icon fa-usd" style="margin-left:30px;"> 5.00 tip </span> 
+                        <span class="icon fa-usd" style="margin-left:30px;"> <%= r.tip %> tip</span> 
                         </p>
 
                         <a href="#" class="button small" style="margin-left:120px; color:rgba(71, 234, 71, 0.9);">Accept</a> <a href="#" class="button small" style="margin-left:20px; color:rgba(228, 31, 31, 0.9);">Hide</a>

@@ -1,9 +1,9 @@
-class PostsController < ApplicationController
-	layout 'internal'
+class RequestsController < ApplicationController
+layout 'internal'
   def index
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
-      @posts = Post.all
+      @requests = Request.all
     else
       redirect_to root_path
     end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   def new
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
-  	   @post = Post.new
+  	   @request = Request.new
   	   @restaurants = Restaurant.all
     else
         redirect_to root_path
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   def index
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
-          @posts = Post.all
+          @requests = Request.all
       else
         redirect_to root_path
       end
@@ -76,8 +76,8 @@ class PostsController < ApplicationController
         if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
-          @post = Post.new
-        elsif post_params[:food_name] != nil
+          @request = Request.new
+        elsif request_params[:food_item_id] != nil
           raise "error"
         else
           raise "error"
@@ -90,12 +90,14 @@ class PostsController < ApplicationController
 
   # create post
   def create
-      if post_params[:food_name] != nil
-        fava_user = FavaUser.find_by_id(session[:fava_user_id])
-        @restaurant = Restaurant.find_by_id(post_params[:restaurant_id])
-        @food_item = FoodItem.find_by_id(post_params[:food_item_id])
+      if request_params[:food_item_id] != nil
+        @fava_user = FavaUser.find_by_id(session[:fava_user_id])
+        @restaurant = Restaurant.find_by_id(request_params[:restaurant_id])
+        @food_item = FoodItem.find_by_id(request_params[:food_item_id])
         #fix this!!
-        @post = Post.new(:poster => fava_user.id, :claimer => nil, :food_item_id => @food_item.id, :tip => post_params[:tip], :notes => post_params[:notes], :status => 0)
+        @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
+        @request.save
+        @request.errors.full_messages
       else
         raise "error"
       end
@@ -115,10 +117,8 @@ class PostsController < ApplicationController
   end
 
 
-  def post_params
-      params.require(:post).permit(:food_item_id, :restaurant_id, :food_name, :restaurant_name, :notes, :tip)
+  def request_params
+      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip)
 
   end
-
-
 end

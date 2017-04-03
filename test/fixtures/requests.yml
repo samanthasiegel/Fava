@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fava_user: one
+  food_item: one
+  tip: 1.5
+  notes: MyString
+  location: MyString
+  status: 1
+
+two:
+  fava_user: two
+  food_item: two
+  tip: 1.5
+  notes: MyString
+  location: MyString
+  status: 1

@@ -1,5 +1,5 @@
 class FoodItem < ApplicationRecord
-	belongs_to :restaurant
+	has_one :restaurant
 	validates :food_name, presence:true
 	validates :price, presence:true, :numericality => true
 	validates :category, presence:true
