@@ -1,35 +1,28 @@
 class Request < ApplicationRecord
-  # belongs_to :fava_user
-  # belongs_to :food_item
-  # before_save :generate_timestamp
+  has_one :fava_user
+  has_one :food_item
 
-  # def generate_timestamp
-  # 	self.timestamp = DateTime.now
-  # end
+  validates :tip, presence:true, numericality:true
+  validates :status, presence:true
+  validate :status_range
+  validates :notes, length: { maximum: 250 }
+  validates :location, presence:true
 
-  # validates :claimer, numericality:true
-  # validates :tip, presence:true, numericality:true
-  # validates :status, presence:true
-  # validate :status_range
-  # validates :notes, length: { maximum: 250 }
-  # validate :diff_poster_claimer
-  # validates :location, presence:true
+  def status_range
+  	if status < 0 or status >= 4
+  		errors.add(:status, 'status must be in range 0-4 inclusive')
+  	end
+  end
 
-  # def status_range
-  # 	if status < 0 or status >= 4
-  # 		errors.add(:status, 'status must be in range 0-4 inclusive')
-  # 	end
-  # end
+  def diff_poster_claimer
+  	if :fava_user_id == :claimer
+  		errors.add(:claimer, 'cannot claim own post')
+  	end
+  end
 
-  # def diff_poster_claimer
-  # 	if :fava_user_id == :claimer
-  # 		errors.add(:claimer, 'cannot claim own post')
-  # 	end
-  # end
-
-  # def get_food_name
-  #   return FoodItem.find_by_id(:food_item_id)
-  # end
+  def get_food_name
+    return FoodItem.find_by_id(:food_item_id)
+  end
 
   def get_food_name
     return FoodItem.find_by_id(food_item_id).food_name
