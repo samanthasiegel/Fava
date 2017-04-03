@@ -210,3 +210,26 @@
 210,4,"Deluxe Sushi Bento","3 pcs tuna and 3 pcs salmon","Sushi",14.94,\N,"shellfish, gluten",0
 211,1,"Spinach Salad","With hard boiled egg, bacon, croutons, parmesan, and dijon vinaigrette","Salads",8.00,\N,"egg, dairy",0
 212,1,"Caesar Salad","With parmesan, grilled red onin, croutons, caesar dressing","Salads",7.00,\N,"dairy",0
+213,5,"Side of Spinach","Sliced mushroom, balsamic vinaigrette","Salads",4.00,\N,\N,2
+214,5,"Side of Kale","Dried cranberry, queso fresco, lime vinaigrette","Salads",4.00,\N,"dairy",1
+215,5,"Fattouch","Mixed greens, tomatoes, cucumber, lemon and oil","Salads",4.00,\N,\N,2
+216,5,"Mediteranean Salad","Potato salad, fresh herbs, lemon vinaigrette","Salads",4.00,\N,"dairy",1
+217,5,"Quinoa Salad","Grilled seasonal local vegetables","Salads",4.00,\N,\N,2
+218,5,"Roasted Brussel Sprouts","Parmesan, balsamic vinaigrette","Salads",4.00,\N,"dairy",1
+219,5,"Orzo Salad","Olives, peppers, green onions","Salads",4.00,\N,\N,2
+220,5,"Moroccan Couscous Salad","Dry fruit, citrus dressing","Salads",4.00,\N,\N,2
+221,5,"Beet Salad","","Salads",4.00,\N,\N,2
+222,5,"Vegan Pasta Salad","","Salads",4.00,\N,\N,2
+223,5,"Sweet Potato Salad","Corn maple syrup dressing","Salads",4.00,\N,\N,1
+224,5,"Cauliflower Salad","","Salads",4.00,\N,\N,1
+225,5,"Hummus","","Snacks",4.00,\N,\N,2
+226,5,"Baga Ghanouh","","Snacks",4.00,\N,\N,2
+227,5,"Tabbouleh","","Snacks",4.00,\N,\N,2
+228,5,"Vegetarian Lentil Soup","","Soups",4.00,\N,\N,1
+229,5,"White Bean Minestrone Soup","","Soups",4.00,\N,\N,1
+230,5,"Tomato Basil with Soy Soup","","Soups",4.00,\N,\N,2
+231,5,"Loaded Potato with Bacon","","Soups",4.00,\N,"dairy",0
+232,5,"Spicy Thai Coconut Chicken Soup","","Soups",4.00,\N,"dairy",0
+233,5,"Falafel Sandwich","With tahini sauce","Sandwiches",5.00,\N,"dairy",1
+234,5,"Big Cheese Sandwich","Pesto, tomatoes, cheddar, swiss, pepper jack","Sandwiches",5.00,\N,"dairy",1
+235,5,"Eggplant Sandwich","Hummus, roasted vegetables","Sandwiches",5.00,\N,\N,2
