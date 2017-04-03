@@ -20,7 +20,9 @@
                         <p> Deliver to: <a href="#" style="font-weight:bold;"><%= r.get_user_name %></a> at <%= r.location %> </p>
                         <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> <%= r.get_restaurant_name %>
                         <span class="icon fa-plus" style="margin-left:30px;"> Add on avocado </span> 
-                        <span class="icon fa-cutlery" style="margin-left:30px;"> Side of tots </span> 
+                        <% if !r.side_id.nil? %>
+                            <span class="icon fa-cutlery" style="margin-left:30px;"> Side of <%= Side.find_by_id(r.side_id) %> </span> 
+                        <% end %>
                         <span class="icon fa-usd" style="margin-left:30px;"> <%= r.tip %> tip</span> 
                         </p>
 

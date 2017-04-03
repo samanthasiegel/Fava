@@ -76,6 +76,7 @@ layout 'internal'
         if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
+          @sides = Side.where(:food_item_id => @food_item.id)
           @request = Request.new
         elsif request_params[:food_item_id] != nil
           raise "error"
@@ -94,6 +95,7 @@ layout 'internal'
         @fava_user = FavaUser.find_by_id(session[:fava_user_id])
         @restaurant = Restaurant.find_by_id(request_params[:restaurant_id])
         @food_item = FoodItem.find_by_id(request_params[:food_item_id])
+        #find a way to save sides
         #fix this!!
         @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
         @request.save
@@ -118,7 +120,7 @@ layout 'internal'
 
 
   def request_params
-      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip)
+      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side)
 
   end
 end

@@ -24,11 +24,18 @@
 						<div class="12u$">
 							<%= f.text_field :restaurant_name, class: 'form-control', value: @restaurant.name, :readonly => true , :disabled => true%>
 						</div>
+						<% if @sides.size > 0 %>
+							<div class="12u$">
+								<h5> Choose a side: </h5>
+								<%= f.collection_select :side_id, @sides, :id, :options %>
+
+							</div>
+						<% end %>
 						<div class="12u$">
 							<%= f.text_field :location, class: 'form-control', placeholder:"Location for delivery" %>
 						</div>
 						<div class="12u$">
-							<%= f.text_field :notes, class: 'form-control', placeholder:"Add ons? Sides? Notes?" %>
+							<%= f.text_field :notes, class: 'form-control', placeholder:"Add ons? Notes?" %>
 						</div>
 						<div class="12u$">
 							<%= f.text_field :tip, class: 'form-control', placeholder:"Tip $ amount" %>

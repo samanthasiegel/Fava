@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403030149) do
+ActiveRecord::Schema.define(version: 20170403184237) do
 
   create_table "fava_users", force: :cascade do |t|
     t.string   "first_name"
@@ -63,8 +63,10 @@ ActiveRecord::Schema.define(version: 20170403030149) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "claimer"
+    t.integer  "side_id"
     t.index ["fava_user_id"], name: "index_requests_on_fava_user_id"
     t.index ["food_item_id"], name: "index_requests_on_food_item_id"
+    t.index ["side_id"], name: "index_requests_on_side_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -74,6 +76,14 @@ ActiveRecord::Schema.define(version: 20170403030149) do
     t.string   "close_hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sides", force: :cascade do |t|
+    t.integer  "food_item_id"
+    t.string   "options"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["food_item_id"], name: "index_sides_on_food_item_id"
   end
 
 end
