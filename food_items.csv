@@ -1,33 +1,33 @@
-1,1,"Black Bean Tortilla Soup","Crispy tortilla strips, sour cream","Soups",3.84,\N,\N,0
-2,1,"DKH Homestyle Chili","Beef, crispy tortilla strips, sour cream","Soups",6.24,\N,\N,0
-3,1,"Southwest Chopped Salad","Romaine, black beans, corn, tomatoes, queso fresco, creamy avocado dressing","Salads",7.94,\N,\N,1
-4,1,"Greek Salad","Romaine, tomatoes, kalamata olives, red onion, feta, greek dressing","Salads",7.74,\N,"dairy",1
-5,1,"DKH Classic Burger","Cheddar, lettuce, tomato, onion","Burgers",8.74,\N,"dairy, gluten",0
-6,1,"Sloppy Burger","Cheddar, bacon, thousand-island, guacamole","Burgers",9.44,\N,"dairy, gluten",0
-7,1,"Southwestern Burger","Cheddar, jalapeño, guacamole, crispy tortilla strips","Burgers",9.94,\N,"dairy, gluten",0
-8,1,"BBQ Burger","Bacon, cheddar, onion rings, BBQ sauce","Burgers",9.50,\N,"dairy, gluten",0
-9,1,"Krafthouse Krazy Burger","Cheddar, provolone, bacon, fried egg, onion rings","Burgers",9.50,\N,"dairy, gluten",0
-10,1,"Ground Beef Tacos","Pico de gallo, sour cream","Tacos",8.54,\N,"dairy",0
-11,1,"Grilled Chicken Tacos","Piceo de gallo, sour cream","Tacos",8.64,\N,"dairy",0
-12,1,"Grilled Fish Tacos","slaw, pico de gallo, sour cream","Tacos",9.94,\N,"dairy, fish",0
+1,1,"Black Bean Tortilla Soup","Crispy tortilla strips, sour cream","Soups",4.00,\N,\N,0
+2,1,"Texas Style Beef Chili","Beef, crispy tortilla strips, sour cream","Soups",7.00,\N,\N,0
+3,1,"Southwest Chopped Salad","Romaine, black beans, corn, tomatoes, queso fresco, creamy avocado dressing","Salads",7.00,\N,\N,1
+4,1,"Greek Salad","Romaine, tomatoes, kalamata olives, red onion, feta, greek dressing","Salads",7.00,\N,"dairy",1
+5,1,"DKH Classic Burger","Cheddar, lettuce, tomato, onion with side of fries","Burgers",8.00,\N,"dairy, gluten",0
+6,1,"Sloppy Burger","Cheddar, bacon, thousand-island, guacamole with side of fries","Burgers",9.00,\N,"dairy, gluten",0
+7,1,"Southwestern Burger","Cheddar, jalapeño, guacamole, crispy tortilla strips with side of fries","Burgers",9.00,\N,"dairy, gluten",0
+8,1,"BBQ Burger","Bacon, cheddar, onion rings, BBQ sauce with side of fries","Burgers",9.50,\N,"dairy, gluten",0
+9,1,"Krafthouse Krazy Burger","Cheddar, provolone, bacon, fried egg, onion rings with side of fries","Burgers",9.50,\N,"dairy, gluten",0
+10,1,"Ground Beef Tacos","Pico de gallo, sour cream","Tacos",8.00,\N,"dairy",0
+11,1,"Grilled Chicken Tacos","Piceo de gallo, sour cream","Tacos",8.00,\N,"dairy",0
+12,1,"Grilled Fish Tacos","slaw, pico de gallo, sour cream","Tacos",9.00,\N,"dairy, fish",0
 13,1,"Reuben Sandwich","Corned beef, sauerkraut, swiss, thousand island, rye bread","Sandwiches",10.00,\N,"dairy, gluten",0
-14,1,"DKH Turkey Double Decker","Bacon, cheddar, lettuce, tomato, onion, mayo, sourdough","Sandwiches",9.24,\N,"dairy, gluten",0
-15,1,"Crispy Chicken Sandwich","Bacon, cheddar, grilled onion, ranch, sriracha mayo, bun","Sandwiches",9.34,\N,"dairy, gluten",0
-16,1,"Krafthouse Cheese Steak","Provoloine, grilled peppers and onions, mayo, grilled sourdough","Sandwiches",9.44,\N,"dairy, gluten",0
-17,1,"Grilled Pimento Cheese Sandwich","Crispy bacon, tomato, grilled sourdough","Sandwiches",8.94,\N,"dairy, gluten",0
-18,1,"Chocolate Brownie","Chocolate sauce, vanilla ice cream","Desserts",6.00,\N,"dairy, eggs",1
+14,1,"DKH Turkey Double Decker","Bacon, cheddar, lettuce, tomato, onion, mayo, sourdough with side of fries","Sandwiches",9.00,\N,"dairy, gluten",0
+15,1,"Crispy Chicken Sandwich","Bacon, cheddar, grilled onion, ranch, sriracha mayo, bun with side of fries","Sandwiches",9.00,\N,"dairy, gluten",0
+16,1,"Krafthouse Cheese Steak","Provoloine, grilled peppers and onions, mayo, grilled sourdough with side of fries","Sandwiches",9.00,\N,"dairy, gluten",0
+17,1,"Grilled Pimento Cheese Sandwich","Crispy bacon, tomato, grilled sourdough with side of fries","Sandwiches",8.00,\N,"dairy, gluten",0
+18,1,"Chocolate Brownie","Chocolate sauce, vanilla ice cream","Desserts",8.00,\N,"dairy, eggs",1
 19,1,"Jumbo Rice Krispy Treat","Rice krispies, marshmallows","Desserts",3.00,\N,\N,1
-20,1,"Sweet Potato Tots","Sweet fried potatoes","Snacks",4.24,\N,\N,2
-21,1,"French Fries","Fried potatoes","Snacks",4.24,\N,\N,2
-22,1,"Cheese Quesadilla","Sour cream, pico de gallo","Snacks",6.54,\N,"dairy, gluten",1
-23,1,"Wings","Chicken wings, hot sauce","Chicken",7.84,\N,"dairy, fish, shellfish, treenuts, peanuts, soybeans",0
-24,1,"Chicken Tenders","Chicken, breadcrumbs","Chicken",6.84,\N,"dairy, gluten",0
-25,1,"Nachos","Cheddar, black beans, jalapeños, pico de gallo, sour cream","Snacks",8.34,\N,"dairy",1
-26,1,"Tortilla Chips & Salsa","Chips, salsa","Snacks",3.74,\N,"dairy",1
+20,1,"Sweet Potato Tots","Sweet fried potatoes","Snacks",4.00,\N,\N,2
+21,1,"French Fries","Fried potatoes","Snacks",4.00,\N,\N,2
+22,1,"Cheese Quesadilla","Sour cream, pico de gallo","Snacks",6.00,\N,"dairy, gluten",1
+23,1,"Southwest Chili Wings","With ranch, your choice of mild, medium, or nuclear sauce","Chicken",8.00,\N,"dairy",0
+24,1,"Chicken Tenders","With sriracha mayo, sweet chili sauce","Chicken",7.00,\N,"dairy, gluten",0
+25,1,"Nachos","Cheddar, black beans, jalapeños, pico de gallo, sour cream","Snacks",8.00,\N,"dairy",1
+26,1,"Tortilla Chips & Salsa","Chips, salsa","Snacks",4.00,\N,"dairy",1
 27,1,"Soft Pretzel","Pretzel, honey mustard","Snacks",3.00,\N,\N,2
 28,1,"Boylan Sodas","Made with cane sugar","Drinks",3.00,\N,\N,1
 29,1,"Smart Water","Water","Drinks",2.50,\N,\N,2
-30,1,"Dasani Water","Water","Drinks",1.74,\N,\N,2
+30,1,"Dasani Water","Water","Drinks",1.50,\N,\N,2
 31,1,"Fresh Brewed Iced Tea","Iced tea","Drinks",3.00,\N,\N,2
 32,2,"Loop Burger","Lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",7.59,\N,"gluten",0
 33,2,"Loop Cheese Burger","Cheese, lettuce, tomato, onion, mayo served with fries, chips, fruit, or broccoli","Burgers",8.39,\N,"dairy, gluten",0
@@ -144,7 +144,7 @@
 144,2,"Ice Cream Loopwich","","Desserts",3.50,\N,"dairy",1
 145,2,"Cookie Sundae","","Desserts",4.49,\N,"dairy",1
 146,2,"Freshly Baked Cookies","","Desserts",1.24,\N,\N,1
-147,2,"Jumbo Chicken Wings","Tossed in your choice of buffalo, honey buffalo, teriyaki, r chipotle BBQ served wih a side of ranch or bleu cheese and celery","Chicken",9.49,\N,"dairy",0
+147,2,"Jumbo Chicken Wings","Tossed in your choice of buffalo, honey buffalo, teriyaki, or chipotle BBQ served wih a side of ranch or bleu cheese and celery","Chicken",9.49,\N,"dairy",0
 148,2,"Chili Cheese Dog","Jumbo all beef hot dog with homemade chili, cheddar cheese, and onions served with your choice of side","Burgers",6.99,\N,"dairy",0
 149,2,"Chicago Dog","Jumbo all beef hot dog with relish, pickles, tomatoes, pepperoncini, onions, and mustard served with your choice of sice","Burgers",6.99,\N,"dairy",0
 150,2,"Grilled Tofu Sandwich","Served with spinash, grilled red pepper, and grilled onion on a wheat bun with your choice of side. Made in lemon juice and rosemary","Sandwiches",7.69,\N,"dairy, gluten",1
@@ -164,14 +164,14 @@
 164,2,"Grape Cup","","Snacks",2.29,\N,\N,2
 165,2,"Strawberry Cup","","Snacks",2.99,\N,\N,2
 166,2,"Pineapple Cup","","Snacks",2.99,\N,\N,2
-167,3,"Grilled Cheese","Cheddar cheese on sour dough or whole wheat with your choice of ham, turkey, or bacon","Sandwiches",9.00,\N,"dairy, gluten",0
-168,3,"Black Angus Burger","Black angus beef on brioche roll with lettuce and tomato","Burgers",9.50,\N,"dairy, gluten",0
+167,3,"Grilled Cheese","Cheddar cheese on sour dough or whole wheat with your choice of fries, tots, salad, or a mix","Sandwiches",9.00,\N,"dairy, gluten",0
+168,3,"Black Angus Burger","Black angus beef on brioche roll with lettuce and tomato with your choice of fries, tots, salad, or a mix","Burgers",9.50,\N,"dairy, gluten",0
 169,3,"Morty's Reuben","Corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread. We can make it with turkey too!","Sandwiches",10,\N,"dairy, gluten",0
-170,3,"Grilled Chicken Sandwich","Marinated and seared, served on brioche roll with lettuce and tomato","Sandwiches",9.50,\N,"dairy, gluten",0
-171,3,"Salmon Burger","Made fresh with ginger and green onion on brioche roll with wasabi mayo","Sandwiches",9.50,\N,"gluten, fish, dairy",0
-172,3,"Pulled Pork BBQ Sandwich","NC Hickory smoked pork barbecue with our Eastern vingar sauce on brioche roll","Sandwiches",9.00,\N,"gluten",0
-173,3,"The Godfather","Cappicollo, salami, turkey, pepperoni, and mortadella with provolone and Italian dressing on a sub roll","Sandwiches",9.50,\N,"dairy, gluten",0
-174,3,"Veggie Single","Veggie burger with lettuce, cheese, onions, pickles, and Russian dressing on brioche roll","Burgers",9.00,\N,"dairy",1
+170,3,"Grilled Chicken Sandwich","Marinated and seared, served on brioche roll with lettuce and tomato with your choice of fries, tots, salad, or a mix","Sandwiches",9.50,\N,"dairy, gluten",0
+171,3,"Salmon Burger","Made fresh with ginger and green onion on brioche roll with wasabi mayo with your choice of fries, tots, salad, or a mix","Sandwiches",9.50,\N,"gluten, fish, dairy",0
+172,3,"Pulled Pork BBQ Sandwich","NC Hickory smoked pork barbecue with our Eastern vingar sauce on brioche roll with your choice of fries, tots, salad, or a mix","Sandwiches",9.00,\N,"gluten",0
+173,3,"The Godfather","Cappicollo, salami, turkey, pepperoni, and mortadella with provolone and Italian dressing on a sub roll with your choice of fries, tots, salad, or a mix","Sandwiches",9.50,\N,"dairy, gluten",0
+174,3,"Veggie Single","Veggie burger with lettuce, cheese, onions, pickles, and Russian dressing on brioche roll with your choice of fries, tots, salad, or a mix","Burgers",9.00,\N,"dairy",1
 175,3,"Chopped Mexican Salad","Corn, tomatoes, black beans, cabbage, chopped romaine tossed with lime vinaigrette and ancho tortilla strips","Salads",9.50,\N,"gluten",1
 176,3,"E Tu, Caesar?!","Crispy romaine, parmesan cheese, creamy Caesar dressing an croutons","Salads",9.00,\N,"dairy, fish",0
 177,3,"Garden of Edens","Organic greens, tomatoes, cucumbers, broccoli, mushrooms, chick peas, carrots, red onion, pepperoncini and sunflower seeds with red wine vinaigrette","Salads",9.00,\N,\N,2
@@ -184,9 +184,9 @@
 184,4,"Seaweed Salad","","Salads",3.94,\N,\N,2
 185,4,"Edamame","","Snacks",3.94,\N,\N,2
 186,4,"Season Scallop Salad","","Salads",3.94,\N,"shellfish, gluten",0
-187,4,"Tuna Sashimi Bowl","5pcs tuna with your choice of sushi rice or salad, a dressing and toppings","Seafood",9.94,\N,\N,0
-188,4,"Salmon Sashimi Bowl","5pcs salmon with your choice of sushi rice or salad, a dressing and toppings","Seafood",9.94,\N,\N,0
-189,4,"Deluxe Sashimi Bowl","4pcs tuna and 4pcs salmon with your choice of sushi rice or salad, a dressing and toppings","Seafood",13.94,\N,\N,0
+187,4,"Tuna Sashimi Bowl","5pcs tuna on sushi rice or salad, topped with lettuce, avocado, beets, cucumber, and your choice of dressing","Seafood",9.94,\N,\N,0
+188,4,"Salmon Sashimi Bowl","5pcs salmon on sushi rice or salad, topped with lettuce, avocado, beets, cucumber, and your choice of dressing","Seafood",9.94,\N,\N,0
+189,4,"Deluxe Sashimi Bowl","4pcs tuna and 4pcs salmon on sushi rice or salad, topped with lettuce, avocado, beets, cucumber, and your choice of dressing","Seafood",13.95,\N,\N,0
 190,4,"California Roll","Crab, avocado, cucumber","Sushi",6.24,\N,"shellfish, gluten",0
 191,4,"Spicy Grilled Chicken Roll","Grilled chicken, cucumber","Sushi",6.24,\N,"gluten",0
 192,4,"Veggie Roll","Avocado, cucumber, pickled carrot","Sushi",6.24,\N,"shellfish, gluten",2
@@ -207,4 +207,6 @@
 207,4,"Gyotaku Special","Crab, cucumber roll topped with salmon and peanut sauce","Sushi",9.94,\N,"shellfish, gluten",0
 208,4,"Tuna Lover","Spicy tuna, cucumber topped with seared tuna, jalapeno, eel sauce and sriracha","Sushi",9.94,\N,"gluten",0
 209,4,"Regular Sushi Bento","Combination of nigiri, sushi rolls, edamame and seaweed salad 2pcs tuna and 2pcs salmon","Sushi",12.94,\N,"shellfish, gluten",0
-210,4,"Deluxe Sushi Bento",3 pcs tuna and 3 pcs salmon,"Sushi",14.94,\N,"shellfish, gluten",0
+210,4,"Deluxe Sushi Bento","3 pcs tuna and 3 pcs salmon","Sushi",14.94,\N,"shellfish, gluten",0
+211,1,"Spinach Salad","With hard boiled egg, bacon, croutons, parmesan, and dijon vinaigrette","Salads",8.00,\N,"egg, dairy",0
+212,1,"Caesar Salad","With parmesan, grilled red onin, croutons, caesar dressing","Salads",7.00,\N,"dairy",0
