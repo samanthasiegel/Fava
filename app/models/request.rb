@@ -38,6 +38,23 @@ class Request < ApplicationRecord
     return Restaurant.find_by_id(food_item.Restaurant_id).name
   end
 
+  def format_float(value)
+    string_tip = value.to_s
+    if string_tip.index('.') == -1
+      string_tip += '.00'
+    elsif string_tip.index('.') == string_tip.size - 2
+      string_tip += '0'
+    end
+    return string_tip
+  end
+
+  def get_total_cost
+    price = FoodItem.find_by_id(food_item_id).price
+    return price + tip
+  end
+
+
+
 
 end
 

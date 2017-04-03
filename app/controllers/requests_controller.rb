@@ -97,9 +97,16 @@ layout 'internal'
         @food_item = FoodItem.find_by_id(request_params[:food_item_id])
         #find a way to save sides
         #fix this!!
-        @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
-        @request.save
-        @request.errors.full_messages
+        @side = Side.find_by_id(request_params[:side_id])
+        if(!@side.nil?)
+          @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0, :side_id => @side.id)
+          @request.save
+          @request.errors.full_messages
+        else
+          @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
+          @request.save
+          @request.errors.full_messages
+        end
       else
         raise "error"
       end
@@ -120,7 +127,7 @@ layout 'internal'
 
 
   def request_params
-      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side)
+      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side_id)
 
   end
 end
