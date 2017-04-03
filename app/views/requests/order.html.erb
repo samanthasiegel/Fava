@@ -19,6 +19,12 @@
 							<%= f.text_field :restaurant_id, class: 'form-control', value: @restaurant.id, :readonly => true%>
 						</div>
 						<div class="12u$">
+							<%= f.text_field :food_name, class: 'form-control', value: @food_item.food_name, :readonly => true%>
+						</div>
+						<div class="12u$">
+							<%= f.text_field :restaurant_name, class: 'form-control', value: @restaurant.name, :readonly => true %>
+						</div>
+						<div class="12u$">
 							<%= f.text_field :location, class: 'form-control', placeholder:"Location for delivery" %>
 						</div>
 						<div class="12u$">

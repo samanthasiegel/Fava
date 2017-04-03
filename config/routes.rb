@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/order', to:'requests#order'
   get '/requests', to:'requests#new'
   post '/requests', to:'requests#create'
-  get '/filter', to: 'posts#filter'
-  get '/filter_by_cat', to: 'posts#filter_by_cat'
+  get '/filter', to: 'requests#filter'
+  get '/filter_by_cat', to: 'requests#filter_by_cat'
 
 end
