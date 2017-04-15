@@ -38,6 +38,11 @@ class Request < ApplicationRecord
     return Restaurant.find_by_id(food_item.Restaurant_id).name
   end
 
+  def get_food_price
+    food_item = FoodItem.find_by_id(food_item_id)
+    return food_item.price
+  end
+
   def format_float(value)
     string_tip = value.to_s
     if string_tip.index('.') == -1

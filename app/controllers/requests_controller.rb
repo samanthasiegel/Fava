@@ -28,6 +28,16 @@ layout 'internal'
       end
   end
 
+  def my_requests
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @requests = Request.where(:fava_user_id => fava_user.id)
+    else
+      redirect_to root_path
+    end
+  end
+
+
   def list_restaurants
       fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
@@ -48,6 +58,7 @@ layout 'internal'
       end
   end
 
+
   def food_item_profile
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
@@ -59,6 +70,32 @@ layout 'internal'
       else
         redirect_to root_path
       end
+  end
+
+  def accept_request
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @request = Request.find_by_id(params[:request])
+    else
+      redirect_to root_path
+    end
+  end
+
+  def confirm_accept
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      request = Request.find_by_id(params[:request])
+      if request.fava_user_id == fava_user.id
+        redirect_to root_path
+      else
+        request.update(claimer: fava_user.id)
+        request.update(status: 1)
+        request.save
+        redirect_to timeline_path
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   def filter

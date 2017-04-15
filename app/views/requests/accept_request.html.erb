@@ -1,0 +1,17 @@
+<% provide(:title, "Accept Request") %>
+
+<article id="main">
+	<header>
+		<h2>Confirm Accept Request</h2>
+			<section class="wrapper style5">
+					<div class="inner">
+						<h3><%=@request.get_food_name %></h3>
+                			<p><span class="icon fa-map-marker"></span> <%= @request.get_restaurant_name %></p>
+                            <p> <span class="icon fa-at"></span> <%= @request.location %> </p>
+                            <p><span class="icon fa-usd"></span> <%= @request.format_float(@request.get_food_price) + " + " + @request.format_float(@request.tip) + " tip"%> </p>
+                             <p><%= button_to "Confirm", confirm_accept_path, method: :get, params: {request: @request.id}, :class => "button small", :style => "color:rgba(63, 191, 63, 0.9)" %></p>
+               			</p>
+					</div>
+			</section>
+	</header>
+</article>
