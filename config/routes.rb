@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  get '/getting_started', to: 'static_pages#getting_started'
   get '/timeline', to: 'requests#index'
   get '/list', to:'requests#list_restaurants'
   get '/list_food', to:'requests#list_food'
