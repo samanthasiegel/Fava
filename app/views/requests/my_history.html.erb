@@ -1,11 +1,12 @@
-<% provide(:title, "My Requests") %>
+<% provide(:title, "My Request History") %>
 
 <article id="main">
             <header>
-              <h2>My Requests</h2>
-              <p>View all of your active requests</p>
+              <h2>My Request History</h2>
+              <p>View all of your previous completed requests</p>
             </header>
             <section class="wrapper style5">
+
               <div class="inner">
                 <% if !@requests.nil? %>
                     <% @requests.each do |r| %>
@@ -24,17 +25,14 @@
                             </span>
                             </p>
                         <% end %>
-                        <% if !r.claimer.nil? %>
-                            <p> Claimed by <%= FavaUser.find_by_id(r.claimer).first_name  %> </p>
-                        <% end %>
+
                         <hr />
                     <% end %>
-                    <% else %>
-                        <p> You haven't made any requests yet! <%= link_to "Click here to submit an order", list_restaurants_path %> </p>
                 <% end %>
                 
 
-               
+                
+
               </div>
             </section>
           </article>

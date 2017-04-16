@@ -28,14 +28,55 @@ layout 'internal'
       end
   end
 
-  def my_requests
+  def completed
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
-      @requests = Request.where(:fava_user_id => fava_user.id)
+      @requests = Request.where(:status => 2).order('updated_at DESC')
     else
       redirect_to root_path
     end
   end
+
+
+  def my_requests
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @requests = Request.where(:fava_user_id => fava_user.id, :status => [0, 1]).all
+    else
+      redirect_to root_path
+    end
+  end
+
+  def my_history
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @requests = Request.where(:fava_user_id => fava_user.id, :status => 2)
+    else
+      redirect_to root_path
+    end
+  end
+
+  def my_deliveries
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @requests = Request.where(:claimer => fava_user.id).order(:status, :created_at)
+    else
+      redirect_to root_path
+    end
+  end
+
+  def complete_delivery
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      request = Request.find_by_id(params[:request])
+      request.update(status: 2)
+      request.save
+      redirect_to my_deliveries_path
+    else
+      redirect_to root_path
+    end
+  end
+
 
 
   def list_restaurants

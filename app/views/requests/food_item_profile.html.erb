@@ -14,7 +14,7 @@
                 			<% if @size_not_empty %>
                 				<p><span class="icon fa-heart-o"> <%= @food_item.size %> </span> </p>
                 			<% end %>
-                			<p><span class="icon fa-usd"> <%= @food_item.price %></span> </p>
+                			<p><span class="icon fa-usd"> <%= @food_item.format_price() %></span> </p>
                			</p>
 					</div>
 					<button class="special" href="#">

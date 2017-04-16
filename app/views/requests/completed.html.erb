@@ -1,11 +1,17 @@
-<% provide(:title, "My Requests") %>
+<% provide(:title, "Completed Deliveries") %>
 
 <article id="main">
             <header>
-              <h2>My Requests</h2>
-              <p>View all of your active requests</p>
+              <h2>Completed Deliveries</h2>
+              <p>Where you can see what deliveries have been made on campus</p>
+              <!-- <p>
+                <% if flash[:info] %>
+                    <%= flash[:info] %>
+                <% end %>
+              </p> -->
             </header>
             <section class="wrapper style5">
+
               <div class="inner">
                 <% if !@requests.nil? %>
                     <% @requests.each do |r| %>
@@ -24,17 +30,14 @@
                             </span>
                             </p>
                         <% end %>
-                        <% if !r.claimer.nil? %>
-                            <p> Claimed by <%= FavaUser.find_by_id(r.claimer).first_name  %> </p>
-                        <% end %>
+
                         <hr />
                     <% end %>
-                    <% else %>
-                        <p> You haven't made any requests yet! <%= link_to "Click here to submit an order", list_restaurants_path %> </p>
                 <% end %>
                 
 
-               
+                
+
               </div>
             </section>
           </article>
