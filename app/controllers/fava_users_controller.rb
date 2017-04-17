@@ -1,7 +1,7 @@
 class FavaUsersController < ApplicationController
 
 
-  layout 'userauth', :only => [:new, :create, :update, :destroy]
+  layout 'userauth', :only => [:new, :create, :update, :destroy, :index, :show, :confirm]
   before_action :set_fava_user, only: [:show, :edit, :update, :destroy]
 
 
@@ -15,6 +15,9 @@ class FavaUsersController < ApplicationController
   # GET /fava_users/1
   # GET /fava_users/1.json
   def show
+  end
+
+  def confirm
   end
 
   # GET /fava_users/new
@@ -43,21 +46,38 @@ class FavaUsersController < ApplicationController
     end
   end
 
-    def getting_started
-      fava_user = FavaUser.find_by_id(session[:fava_user_id])
-      if fava_user && fava_user.activated
-        @fava_user = fava_user
-      else
-        redirect_to root_path
-      end
+  def getting_started
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @fava_user = fava_user
+    else
+      redirect_to root_path
     end
+  end
+
+  def incorrect_pin
+   fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @fava_user = fava_user
+    else
+      redirect_to root_path
+    end
+  end
+
+  def is_number? string
+    true if Float(string) rescue false
+  end
 
   def submit_pin
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
-    if fava_user && fava_user.activated
-      fava_user.update(pin: pin_params[:pin])
-      fava_user.save
-      redirect_to timeline_path
+    if fava_user && fava_user.activated 
+      if pin_params[:pin].length != 4 or !is_number?(pin_params[:pin])
+        redirect_to incorrect_pin_path
+      else
+        fava_user.update(pin: pin_params[:pin])
+        fava_user.save
+        redirect_to timeline_path
+      end
     else
       redirect_to root_path
     end
@@ -108,6 +128,6 @@ class FavaUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fava_user_params
-      params.require(:fava_user).permit(:first_name, :last_name, :email, :phone, :pin)
+      params.require(:fava_user).permit(:first_name, :last_name, :email, :phone, :password, :password_confirmation)
     end
 end

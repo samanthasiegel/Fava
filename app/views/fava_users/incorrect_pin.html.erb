@@ -1,0 +1,19 @@
+<article id="main">
+    <div class="inner" style="text-align:center; margin-top:70px;">
+      <h5 style="font-size:40px;"> Incorrect pin input </h5>
+      <p> Please input a 4-digit pin (only use numbers) </p>
+      <%= form_for @fava_user, url: {action: "submit_pin"} do |f| %>
+        <div class="row uniform">
+          <h4 style="color:white; margin-left:525px;"> Enter your 4-digit pin: </h4>
+          <div class="12u$" style="width:200px; margin-left:580px;">
+            <%= f.text_field :pin, class: 'form-control', :style => "background-color:white; color:black;" %>
+          </div>
+          <div class="12u$">
+            <ul class="actions">
+              <li><%=f.submit "Post", class: "special" %></li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </article>

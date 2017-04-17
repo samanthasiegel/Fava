@@ -1,0 +1,25 @@
+<% provide(:title, "Complete Delivery") %>
+
+<article id="main">
+	<header>
+		<h2>Complete Delivery</h2>
+			<section class="wrapper style5">
+                <%= form_tag check_pin_path do %>
+                    <%= label_tag :pin ,"Enter your 4-digit pin: "%>
+                    <div style="padding-right:500px; padding-left:500px;" >
+                    <%= text_field_tag :request, params[:request], :readonly => true%>
+                    <%= text_field_tag :pin, params[:pin] %>
+                    </div>
+                    <%= submit_tag "Complete Delivery", :class => "button button small", :style=>"margin-top:30px;" %>
+                <% end %>
+                <!-- <p> Enter pin:
+                    <div style="padding-right:500px; padding-left:500px;" >
+                     <%= text_field_tag :id => :pin%> 
+                    </div>
+                    <%= button_to "Complete Delivery", check_pin_path, method: :get, params: {request: @request.id, pin: params[:pin]}, :class => "button small", :style=> "margin-top:20px;"%>
+
+                </p> -->
+               
+			</section>
+	</header>
+</article>

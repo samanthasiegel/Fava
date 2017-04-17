@@ -65,17 +65,48 @@ layout 'internal'
     end
   end
 
+
   def complete_delivery
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
-      request = Request.find_by_id(params[:request])
-      request.update(status: 2)
-      request.save
-      redirect_to my_deliveries_path
+      @request = Request.find_by_id(params[:request])
     else
       redirect_to root_path
     end
   end
+
+  def check_pin
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      request = Request.find_by_id(params[:request])
+      claimer = FavaUser.find_by_id(request.claimer);
+      pin = params[:pin]
+      p pin
+      p claimer.pin
+      if claimer.pin == pin
+        request = Request.find_by_id(params[:request])
+        request.update(status: 2)
+        request.save
+        redirect_to my_deliveries_path
+      else
+        redirect_to timeline_path
+      end
+    else
+      redirect_to root_path
+    end
+  end
+
+  # def complete_delivery
+  #   fava_user = FavaUser.find_by_id(session[:fava_user_id])
+  #   if fava_user && fava_user.activated
+  #     request = Request.find_by_id(params[:request])
+  #     request.update(status: 2)
+  #     request.save
+  #     redirect_to my_deliveries_path
+  #   else
+  #     redirect_to root_path
+  #   end
+  # end
 
 
 

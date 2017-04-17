@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/getting_started', to: 'fava_users#getting_started'
   patch '/submit_pin', to: 'fava_users#submit_pin'
+  get '/incorrect_pin', to: 'fava_users#incorrect_pin'
+  post '/check_pin', to: 'requests#check_pin'
 
   get '/timeline', to: 'requests#index'
   get '/completed', to: 'requests#completed'
