@@ -1,6 +1,7 @@
 class FavaUsersController < ApplicationController
 
-  layout 'userauth'
+
+  layout 'userauth', :only => [:new, :create, :update, :destroy]
   before_action :set_fava_user, only: [:show, :edit, :update, :destroy]
 
 
@@ -42,10 +43,37 @@ class FavaUsersController < ApplicationController
     end
   end
 
+    def getting_started
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+      else
+        redirect_to root_path
+      end
+    end
+
+  def submit_pin
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      fava_user.update(pin: pin_params[:pin])
+      fava_user.save
+      redirect_to timeline_path
+    else
+      redirect_to root_path
+    end
+  end
+
+  private
+    def pin_params
+      params.require(:fava_user).permit(:pin)
+
+  end
+
   private
     def user_params
         params.require(:fava_user).permit(:first_name, :last_name, :email, :phone, :password, :password_confirmation)
     end
+
 
 
   # PATCH/PUT /fava_users/1
@@ -80,6 +108,6 @@ class FavaUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fava_user_params
-      params.require(:fava_user).permit(:first_name, :last_name, :email, :phone)
+      params.require(:fava_user).permit(:first_name, :last_name, :email, :phone, :pin)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403184237) do
+ActiveRecord::Schema.define(version: 20170416231500) do
 
   create_table "fava_users", force: :cascade do |t|
     t.string   "first_name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170403184237) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.string   "remember_digest"
+    t.string   "pin"
   end
 
   create_table "food_items", force: :cascade do |t|

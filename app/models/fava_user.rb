@@ -7,6 +7,7 @@ class FavaUser < ApplicationRecord
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@duke.edu+\z/i
 	validates :email, presence:true, length:{maximum:255}, format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
 	validates :phone, presence:true, :numericality => true, length:{is: 10}
+	# validates :pin, presence:false,length:{maximum: 4, minimum: 4}
 	has_secure_password
 
 
