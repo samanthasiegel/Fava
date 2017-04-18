@@ -12,6 +12,7 @@ layout 'internal'
   def new
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+       @fava_user = fava_user
   	   @request = Request.new
   	   @restaurants = Restaurant.all
     else
@@ -32,6 +33,7 @@ layout 'internal'
   def completed
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @requests = Request.where(:status => 2).order('updated_at DESC')
     else
       redirect_to root_path
@@ -42,6 +44,7 @@ layout 'internal'
   def my_requests
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @requests = Request.where(:fava_user_id => fava_user.id, :status => [0, 1]).all
     else
       redirect_to root_path
@@ -51,6 +54,7 @@ layout 'internal'
   def my_history
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @requests = Request.where(:fava_user_id => fava_user.id, :status => 2)
     else
       redirect_to root_path
@@ -60,6 +64,7 @@ layout 'internal'
   def my_deliveries
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @requests = Request.where(:claimer => fava_user.id).order(:status, :created_at)
     else
       redirect_to root_path
@@ -70,6 +75,7 @@ layout 'internal'
   def complete_delivery
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @request = Request.find_by_id(params[:request])
     else
       redirect_to root_path
@@ -79,15 +85,18 @@ layout 'internal'
   def check_pin
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       request = Request.find_by_id(params[:request])
-      claimer = FavaUser.find_by_id(request.claimer);
+      requester = FavaUser.find_by_id(request.fava_user_id);
       pin = params[:pin]
       p pin
-      p claimer.pin
-      if claimer.pin == pin
+      p requester.pin
+      if requester.pin == pin
         request = Request.find_by_id(params[:request])
         request.update(status: 2)
         request.save
+        fava_user.update(fava_points: fava_user.fava_points + request.tip.to_f)
+        fava_user.save
         redirect_to my_deliveries_path
       else
         redirect_to timeline_path
@@ -114,6 +123,7 @@ layout 'internal'
   def list_restaurants
       fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+          @fava_user = fava_user
           @restaurants = Restaurant.all
       else
         redirect_to root_path
@@ -123,6 +133,7 @@ layout 'internal'
   def list_food
       fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+          @fava_user = fava_user
           @restaurant = Restaurant.find_by_id(params[:restaurant])
           @food_items = FoodItem.where(:Restaurant_id => params[:restaurant])
 
@@ -135,6 +146,7 @@ layout 'internal'
   def food_item_profile
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+          @fava_user = fava_user
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
           @size_not_empty = (@food_item.size != "\\N")
@@ -148,6 +160,7 @@ layout 'internal'
   def accept_request
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user = fava_user
       @request = Request.find_by_id(params[:request])
     else
       redirect_to root_path
@@ -157,6 +170,7 @@ layout 'internal'
   def confirm_accept
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
+      @fava_user =fava_user
       request = Request.find_by_id(params[:request])
       if request.fava_user_id == fava_user.id
         redirect_to root_path
@@ -176,18 +190,23 @@ layout 'internal'
   end
 
   def filter_by_cat
+      @fava_user = fava_user
        @food_items = FoodItem.where(:category => params[:category])
-          @category = params[:category]
+        @category = params[:category]
   end
 
   def order
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+        @fava_user = fava_user
         if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
           @sides = Side.where(:food_item_id => @food_item.id)
           @request = Request.new
+          change_in_points = @food_item.price + @request.tip.to_f
+          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
+          fava_user.save
         elsif request_params[:food_item_id] != nil
           raise "error"
         else
@@ -201,6 +220,7 @@ layout 'internal'
 
   # create post
   def create
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if request_params[:food_item_id] != nil
         @fava_user = FavaUser.find_by_id(session[:fava_user_id])
         @restaurant = Restaurant.find_by_id(request_params[:restaurant_id])
@@ -214,6 +234,7 @@ layout 'internal'
           @request.errors.full_messages
         else
           @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
+          
           @request.save
           @request.errors.full_messages
         end

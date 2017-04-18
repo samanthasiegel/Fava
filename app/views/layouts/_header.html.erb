@@ -7,7 +7,7 @@
     <h1><a href="index.html">Fava</a></h1>
     <nav id="nav" style="width:100%; ">
       <ul>
-        <li style="font-size:16px;margin-left:20px;"> <span class="glyphicon glyphicon-certificate" aria-hidden="true"> </span> <%= @fava_user.fava_points %> Fava points</li>
+        <li style="font-size:16px;margin-left:20px;"> <span class="glyphicon glyphicon-certificate" aria-hidden="true"> </span> <%= @fava_user.format_points() %> Fava points</li>
         <li class="special" style="float:right;">
           <a href="#menu" class="menuToggle"><span>Menu</span></a>
           <div id="menu">
