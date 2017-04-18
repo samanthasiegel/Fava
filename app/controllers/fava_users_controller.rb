@@ -34,6 +34,7 @@ class FavaUsersController < ApplicationController
   def create
     @fava_user = FavaUser.new(user_params)
 
+    @fava_user.update(fava_points: 20)
     respond_to do |format|
       if @fava_user.save
         UserMailer.account_activation(@fava_user).deliver_now
@@ -50,6 +51,7 @@ class FavaUsersController < ApplicationController
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
       @fava_user = fava_user
+
     else
       redirect_to root_path
     end

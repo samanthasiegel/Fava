@@ -21,6 +21,9 @@
 	}
 
 
+	.transition{
+	background-color: red;
+	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -3302,6 +3305,7 @@
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
+			transition: background .2s ease-in;
 			right: 0;
 			top: 0;
 		}

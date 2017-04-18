@@ -22,6 +22,7 @@ layout 'internal'
   def index
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
+          @fava_user = fava_user
           @requests = Request.all
       else
         redirect_to root_path
