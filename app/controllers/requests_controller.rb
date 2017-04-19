@@ -135,7 +135,7 @@ layout 'internal'
       if fava_user && fava_user.activated
           @fava_user = fava_user
           @restaurant = Restaurant.find_by_id(params[:restaurant])
-          @food_items = FoodItem.where(:Restaurant_id => params[:restaurant])
+          @food_items = FoodItem.where(:rest => params[:restaurant])
 
       else
         redirect_to root_path
@@ -156,7 +156,7 @@ layout 'internal'
           	@broke_message = false
           end
           p @broke_message
-          @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
+          @restaurant = Restaurant.find_by_id(@food_item.rest)
           @size_not_empty = (@food_item.size != "\\N")
           @allergy_not_empty = (@food_item.allergy_info != "\\N")
 
@@ -209,7 +209,7 @@ layout 'internal'
         @fava_user = fava_user
         if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
-          @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
+          @restaurant = Restaurant.find_by_id(@food_item.rest)
           @sides = Side.where(:food_item_id => @food_item.id)
           @request = Request.new
           

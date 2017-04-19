@@ -49,7 +49,7 @@ class Request < ApplicationRecord
 
   def get_restaurant_name
     food_item = FoodItem.find_by_id(food_item_id)
-    return Restaurant.find_by_id(food_item.Restaurant_id).name
+    return Restaurant.find_by_id(food_item.rest).name
   end
 
   def get_food_price
