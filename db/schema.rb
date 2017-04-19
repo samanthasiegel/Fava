@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418194033) do
+ActiveRecord::Schema.define(version: 20170419145819) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20170418194033) do
   end
 
   create_table "food_items", force: :cascade do |t|
-    t.integer "Restaurant_id"
     t.string  "food_name"
     t.string  "description"
     t.string  "category"
@@ -43,7 +42,8 @@ ActiveRecord::Schema.define(version: 20170418194033) do
     t.string  "size"
     t.string  "allergy_info"
     t.integer "dietary_info"
-    t.index ["Restaurant_id"], name: "index_food_items_on_Restaurant_id"
+    t.integer "Restaurant_id"
+    t.integer "rest"
   end
 
   create_table "posts", force: :cascade do |t|

@@ -8,17 +8,31 @@ class Request < ApplicationRecord
   validates :notes, length: { maximum: 250 }
   validates :location, presence:true
 
+
+  # # # # # # # Checks for attributes # # # # # # #
+
+  # Status must be {0, 1, 2, 3}
   def status_range
   	if status < 0 or status >= 4
   		errors.add(:status, 'status must be in range 0-4 inclusive')
   	end
   end
 
+  # Poster cannot claim their own request
   def diff_poster_claimer
-  	if :fava_user_id == :claimer
+  	if fava_user_id == claimer
   		errors.add(:claimer, 'cannot claim own post')
   	end
   end
+
+  def find_poster
+    if FavaUser.find_by_id(fava_user_id).nil?
+      errors.add(:fava_user_id, 'this user does not exist')
+    end
+  end
+
+
+  # # # # # # # # Methods # # # # # # # #
 
   def get_food_name
     return FoodItem.find_by_id(:food_item_id)
