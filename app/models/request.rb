@@ -49,6 +49,8 @@ class Request < ApplicationRecord
       string_tip += '.00'
     elsif string_tip.index('.') == string_tip.size - 2
       string_tip += '0'
+    elsif string_tip[string_tip.index('.'), string_tip.length].length > 3
+      string_tip = string_tip[0, string_tip.index('.') + 2]
     end
     return string_tip
   end

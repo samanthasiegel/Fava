@@ -48,4 +48,19 @@ namespace :import do
 		puts "Imported #{counter} sides"
 	end
 
+	desc "Import categories from csv"
+	task categories: :environment do
+		filename = File.join Rails.root, "categories.csv"
+		counter = 0;
+		CSV.foreach(filename) do |row|
+			c_id, c_name = row
+			c = Category.new(name: c_name)
+			c.id = c_id
+			c.save!
+			puts "#{c_name} - #{c.errors.full_messages.join(',')}" if c.errors.any?
+			counter += 1 if c.persisted?
+		end
+		puts "Imported #{counter} categories"
+	end
+
 end

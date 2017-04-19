@@ -12,6 +12,13 @@ class SessionsController < ApplicationController
 
 
   def new
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @fava_user = fava_user
+      redirect_to '/timeline'
+    else
+    end
+
   end
 
   def create

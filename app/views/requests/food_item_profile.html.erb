@@ -7,6 +7,7 @@
               <span id="startchange"></span>
 			<section class="wrapper style5">
 					<div class="inner">
+                       
 						<h3><%=@food_item.food_name %></h3>
                 			<p><span class="icon fa-map-marker"></span> <%= @restaurant.name %></p>
                 			<p><span class="icon fa-cutlery"> <%= @food_item.description%> </span> </p>
@@ -19,9 +20,15 @@
                 			<p><span class="icon fa-usd"> <%= @food_item.format_price() %></span> </p>
                			</p>
 					</div>
-					<button class="special" href="#">
-                        <%= link_to "Request Order", order_path(food_item: @food_item) %>
-                    </button>
+                     <% if @broke_message == true %>
+                        <h4 style="color:red;"> You don't have enough Fava points to order this delicious food! </h4>
+                        <h4 style="margin-bottom:50px;">Click here to add more. </h4>
+                    <% else %>
+
+                        <button class="special" href="#">
+                            <%= link_to "Request Order", order_path(food_item: @food_item) %>
+                        </button>
+                    <% end %>
 			</section>
 	</header>
 </article>

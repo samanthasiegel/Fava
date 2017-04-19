@@ -148,6 +148,14 @@ layout 'internal'
       if fava_user && fava_user.activated
           @fava_user = fava_user
           @food_item = FoodItem.find_by_id(params[:food_item])
+          if @food_item.price > fava_user.fava_points
+          	p "HERE"
+          	@broke_message = true
+          else
+          	p "NO HERE"
+          	@broke_message = false
+          end
+          p @broke_message
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
           @size_not_empty = (@food_item.size != "\\N")
           @allergy_not_empty = (@food_item.allergy_info != "\\N")
@@ -204,9 +212,7 @@ layout 'internal'
           @restaurant = Restaurant.find_by_id(@food_item.Restaurant_id)
           @sides = Side.where(:food_item_id => @food_item.id)
           @request = Request.new
-          change_in_points = @food_item.price + @request.tip.to_f
-          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
-          fava_user.save
+          
         elsif request_params[:food_item_id] != nil
           raise "error"
         else
@@ -232,11 +238,18 @@ layout 'internal'
           @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0, :side_id => @side.id)
           @request.save
           @request.errors.full_messages
+          change_in_points = @food_item.price + @request.tip.to_f
+
+          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
+          fava_user.save
         else
           @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
           
           @request.save
           @request.errors.full_messages
+          change_in_points = @food_item.price + @request.tip.to_f
+          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
+          fava_user.save
         end
       else
         raise "error"

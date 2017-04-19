@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
+
 
   def submit_pin
   	fava_user = FavaUser.find_by_id(session[:fava_user_id])
