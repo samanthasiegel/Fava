@@ -31,6 +31,15 @@
 
 							</div>
 						<% end %>
+
+						<% if @sizes.size > 0 %>
+							<div class="12u$">
+								<h5> Choose a size: </h5>
+								<%= f.collection_select :size_id, @sizes, :id, :full_descr %>
+
+							</div>
+						<% end %>
+						
 						<div class="12u$">
 							<%= f.text_field :location, class: 'form-control', placeholder:"Location for delivery" %>
 						</div>

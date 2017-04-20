@@ -18,7 +18,11 @@
                 <% if !@requests.nil? %>
                     <% @requests.each do |r| %>
                         <img src='https://studentaffairs.duke.edu/sites/default/files/u110/Sammi%20.jpg' style="float:left; height:100px; width:100px; border-radius: 50%; margin-right: 20px;" />
-                        <h3> <%= r.get_food_name %>, $<%= r.format_float(r.get_food_price) %></h3>
+                         <% if !r.size_id.nil? %>
+                                <h3><%= r.get_food_name %>, $<%= Size.find_by_id(r.size_id).price %> </h3>
+                          <% else %>
+                              <h3> <%= r.get_food_name %>, $<%= r.format_float(r.get_food_price) %></h3>
+                            <% end %>
                         <p> Deliver to: <a href="#" style="font-weight:bold;"><%= r.get_user_name %></a> at <%= r.location %> </p>
                         <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> <%= r.get_restaurant_name %>
                         <% if !r.side_id.nil? %>

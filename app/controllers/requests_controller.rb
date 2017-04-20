@@ -97,6 +97,15 @@ layout 'internal'
         request.save
         fava_user.update(fava_points: fava_user.fava_points + request.tip.to_f)
         fava_user.save
+        if !request.size_id.nil?
+          change_in_points = Size.find_by_id(request.size_id).price + request.tip.to_f
+          requester.update(fava_points: requester.fava_points - change_in_points)
+          requester.save!
+        else
+          change_in_points = FoodItem.find_by_id(request.food_item_id) + request.tip.to_f
+          requester.update(fava_points: requester.fava_points - change_in_points)
+          requester.save!
+        end
         redirect_to my_deliveries_path
       else
         redirect_to timeline_path
@@ -149,15 +158,15 @@ layout 'internal'
           @fava_user = fava_user
           @food_item = FoodItem.find_by_id(params[:food_item])
           if @food_item.price > fava_user.fava_points
-          	p "HERE"
           	@broke_message = true
           else
-          	p "NO HERE"
           	@broke_message = false
           end
           p @broke_message
           @restaurant = Restaurant.find_by_id(@food_item.rest)
-          @size_not_empty = (@food_item.size != "\\N")
+          if(Size.where(:food_item_id => @food_item.id).all.size > 0)
+            @size = Size.where(:food_item_id => @food_item.id).all
+          end
           @allergy_not_empty = (@food_item.allergy_info != "\\N")
 
       else
@@ -211,6 +220,7 @@ layout 'internal'
           @food_item = FoodItem.find_by_id(params[:food_item])
           @restaurant = Restaurant.find_by_id(@food_item.rest)
           @sides = Side.where(:food_item_id => @food_item.id)
+          @sizes = Size.where(:food_item_id => @food_item.id)
           @request = Request.new
           
         elsif request_params[:food_item_id] != nil
@@ -234,22 +244,21 @@ layout 'internal'
         #find a way to save sides
         #fix this!!
         @side = Side.find_by_id(request_params[:side_id])
+        @size = Size.find_by_id(request_params[:size_id])
         if(!@side.nil?)
           @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0, :side_id => @side.id)
+          if(!@size.nil?)
+            @request.size_id = @size.id
+          end
           @request.save
           @request.errors.full_messages
-          change_in_points = @food_item.price + @request.tip.to_f
-
-          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
-          fava_user.save
         else
           @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
-          
+          if(!@size.nil?)
+            @request.size_id = @size.id
+          end
           @request.save
           @request.errors.full_messages
-          change_in_points = @food_item.price + @request.tip.to_f
-          fava_user.update(fava_points: fava_user.fava_points - change_in_points)
-          fava_user.save
         end
       else
         raise "error"
@@ -271,7 +280,7 @@ layout 'internal'
 
 
   def request_params
-      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side_id)
+      params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side_id, :size_id)
 
   end
 end

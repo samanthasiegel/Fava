@@ -53,8 +53,12 @@ class Request < ApplicationRecord
   end
 
   def get_food_price
-    food_item = FoodItem.find_by_id(food_item_id)
-    return food_item.price
+    if !size_id.nil?
+      return Size.find_by_id(size_id).price
+    else
+      food_item = FoodItem.find_by_id(food_item_id)
+      return food_item.price
+    end
   end
 
   def format_float(value)

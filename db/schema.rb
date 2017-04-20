@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419145819) do
+ActiveRecord::Schema.define(version: 20170420073212) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170419145819) do
     t.string  "description"
     t.string  "category"
     t.float   "price"
-    t.string  "size"
+    t.boolean "size"
     t.string  "allergy_info"
     t.integer "dietary_info"
     t.integer "Restaurant_id"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170419145819) do
     t.datetime "updated_at",   null: false
     t.integer  "claimer"
     t.integer  "side_id"
+    t.integer  "size_id"
     t.index ["fava_user_id"], name: "index_requests_on_fava_user_id"
     t.index ["food_item_id"], name: "index_requests_on_food_item_id"
     t.index ["side_id"], name: "index_requests_on_side_id"
@@ -92,6 +93,16 @@ ActiveRecord::Schema.define(version: 20170419145819) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["food_item_id"], name: "index_sides_on_food_item_id"
+  end
+
+  create_table "sizes", force: :cascade do |t|
+    t.string   "size_descr"
+    t.integer  "food_item_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.float    "price"
+    t.string   "full_descr"
+    t.index ["food_item_id"], name: "index_sizes_on_food_item_id"
   end
 
 end

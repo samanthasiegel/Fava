@@ -14,10 +14,16 @@
                 			<% if @allergy_not_empty %>
                 				<p><span class="icon fa-exclamation"> <%= @food_item.allergy_info %> </span> </p>
                 			<% end %>
-                			<% if @size_not_empty %>
-                				<p><span class="icon fa-heart-o"> <%= @food_item.size %> </span> </p>
-                			<% end %>
+                			<% if !@size.nil? %>
+                             <p><span class="icon fa-heart-o"> </span>
+                                <% @size.each do |f| %>
+                				   <%= f.size_descr %> ($<%= f.price %>) |
+                                <% end %>
+                                </p>
+                            <% else %>
                 			<p><span class="icon fa-usd"> <%= @food_item.format_price() %></span> </p>
+                            
+                            <% end %>
                			</p>
 					</div>
                      <% if @broke_message == true %>
