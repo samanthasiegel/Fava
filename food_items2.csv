@@ -202,3 +202,73 @@
 233,5,"Falafel Sandwich","With tahini sauce","Sandwiches",5.00,false,"dairy",1
 234,5,"Big Cheese Sandwich","Pesto, tomatoes, cheddar, swiss, pepper jack","Sandwiches",5.00,false,"dairy",1
 235,5,"Eggplant Sandwich","Hummus, roasted vegetables","Sandwiches",5.00,false,\N,2
+236,7,"Drip Coffee","","Coffee/Hot Drinks",2.00,true,\N,1
+237,7,"Espresso","","Coffee/Hot Drinks",2.25,false,\N,1
+238,7,"Red Eye","","Coffee/Hot Drinks",2.00,true,\N,1
+239,7,"Americano","","Coffee/Hot Drinks",2.00,true,\N,1
+240,7,"Macchiato","","Coffee/Hot Drinks",3.00,false,\N,1
+241,7,"Cappuccino","","Coffee/Hot Drinks",3.50,true,\N,1
+242,7,"Cafe Latte","","Coffee/Hot Drinks",3.50,true,\N,1
+243,7,"Latte Nutella","Nutella and cocoa nibs","Coffee/Hot Drinks",3.50,true,\N,1
+244,7,"Mocha Latte","Sweet dark or white","Coffee/Hot Drinks",4.00,true,\N,1
+245,7,"Caramel Leche","Vanilla, pure caramel","Coffee/Hot Drinks",4.00,true,\N,1
+246,7,"Chai Latte","","Coffee/Hot Drinks",3.75,true,\N,1
+247,7,"Matcha Green Tea Latte","","Coffee/Hot Drinks",4.00,true,\N,1
+248,7,"Vietnamese Iced Coffee","Iced coffee with sweetened condensed milk","Coffee/Hot Drinks",4.50,true,\N,1
+249,7,"Hot Chocolate","","Coffee/Hot Drinks",2.50,true,\N,1
+250,7,"Organic Whole Leaf Tea","","Coffee/Hot Drinks",2.25,false,\N,2
+251,7,"Steak Pizzaiola","House-roasted Mills Family Farm grass-fed beef, organic arugula, provolone, caramelized onion, roasted red pepper, tomato basil sauce","Sandwiches",8.50,false,"wheat",0
+252,7,"Eggplant Mozzarella","Fresh mozzarella, vine ripe tomatoes, organic baby spinach, basil, sea salt, balsamic glaze.","Sandwiches",7.00,false,"dairy, wheat",1
+253,7,"Pimento Cheese & Bacon","House-made pimento cheese, crispy bacon, vine ripe tomatoes","Sandwiches",6.25,false,"dairy, eggs, wheat",0
+254,7,"Turkey Avocado","House-roasted turkey breast, avocado, organic arugula, apple-wood smoked bacon, jalepeno aioli","Sandwiches",8.00,false,"eggs, wheat",0
+255,7,"Portobello Spinach & Artichoke","Holly Grove farm goat cheese, organic baby spniach, artichoke hearts, romesco sauce","Sandwiches",7.00,false,"dairy, tree nuts, wheat",1
+256,7,"Caramel Frappe","Pure caramel, espresso, milk frapped, topped with fresh whipped cream","Drinks",4.75,true,\N,1
+257,7,"Vanilla Frappe","Vanilla, espresso, milk, frapped, topped with fresh whipped cream","Drinks",4.75,true,\N,1
+258,7,"Mocha Frappe","Dark chocolate, espresso, milk, frapped, topped with fresh whipped cream.","Drinks",4.75,true,\N,1
+259,7,"Nutella Frappe","Nutella, espresso, milk, frapped, topped with fresh whipped cream","Drinks",4.75,true,\N,1
+260,7,"Matcha Frappe","Matcha green tea, almond, milk, frapped, topped with fresh whipped cream","Drinks",4.75,true,\N,1
+261,7,"Chai Frappe","Organic chai tea, milk, frapped, topped with fresh whipped cream","Drinks",4.75,true,\N,1
+262,7,"Croque Monsieur","Black forest ham, swiss, dijonaise","Crêpes",7.00,false,"dairy, eggs, wheat",0
+263,7,"Truffled Hummus","Fresh vegetables, organic arugula","Crêpes",7.00,false,"dairy, eggs, wheat",1
+264,7,"Chicken Pesto","Local all-natural chicken breast, organic arugula, pest, roasted tomatoes, fresh mozzarella, balsamic glaze.","Crêpes",8.00,false,"dairy, eggs, tree nuts, wheat",0
+265,7,"Apple & Brie","Truffle honey, organic arugula","Crêpes",7.00,false,"dairy, eggs, wheat",1
+266,7,"Cinnamon Sugar","","Crêpes",5.00,false,"dairy, eggs, wheat",1
+267,7,"Nutella","","Crêpes",6.00,false,"dairy, eggs, tree nuts, wheat",1
+268,7,"Banana Foster","","Crêpes",6.00,false,"dairy, eggs, wheat",1
+269,7,"Crêpe Suzette","","Crêpes",6.00,false,"dairy, eggs, wheat",1
+270,7,"Strawberry Smoothie","Juicy strawberries, banana, orange juice, strawberry sorbet","Drinks",4.75,true,\N,2
+271,7,"Mango Smoothie","Mango, banana, orange juice, mango sorbet","Drinks",4.75,true,\N,2
+272,7,"Raspberry Smoothie","Raspberries, banana, apple juice, strawberry sorbet","Drinks",4.75,true,\N,2
+273,7,"Green Monster Smoothie","Kale, cucumber, celery, spinach, green apple","Drinks",4.75,true,\N,2
+274,7,"Healthy Boost Smoothie","Beet, apple, celery, carrot, ginger","Drinks",4.75,true,\N,2
+275,7,"Delicious Trio Smoothie","Pineapple, orange, apple","Drinks",4.75,true,\N,2
+276,7,"Orange Juice","","Drinks",4.75,true,\N,2
+277,7,"Apple Juice","","Drinks",4.75,true,\N,2
+278,7,"Cappuccino Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+279,7,"Dolce De Leche Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+280,7,"Hazelnut Gelato","","Desserts",4.00,true,"dairy, tree nuts, soybeans",1
+281,7,"Pistachio Gelato","","Desserts",4.00,true,"dairy, tree nuts, soybeans",1
+282,7,"Salted Caramel Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+283,7,"Mint Chocolate Chip Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+284,7,"Chocolate Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+285,7,"Vanilla Gelato","","Desserts",4.00,true,"dairy, soybeans",1
+286,7,"Lemon Sorbetto","","Desserts",4.00,true,"soybeans",2
+287,7,"Mango Sorbetto","","Desserts",4.00,true,"soybeans",2
+288,7,"Mixed Berries Sorbetto","","Desserts",4.00,true,"soybeans",2
+289,8,"Breakfast Blue Plate","Scrambled eggs with biscuit or toast","Breakfast Foods",7.00,false,"eggs",1
+290,8,"Two Biscuits with Gravy","","Breakfast Foods",4.00,false,\N,0
+291,8,"Omelets to Order","Local free range two egg omelet with your choice of fillings (specify in notes), plus a biscuit or toast","Breakfast Foods",8.00,false,"eggs",1
+292,8,"Fried Chicken","Served with one side","Chicken",7.00,true,\N,0
+293,8,"Pulled Pork BBQ Sandwich","Served with one side","Sandwich",8.00,false,\N,0
+294,8,"Pulled Pork Platter","Served with one side","Meat",9.00,false,\N,0
+295,8,"Po' Boy of the Day","Served on New Orleans-style French bread, dressed with mayo, lettuce, tomato, and pickle. Served with one side","Sandwich",8.00,false,\N,0
+296,8,"Apple Bread Pudding","With caramel whiskey sauce","Desserts",5.00,false,\N,1
+297,8,"Seasonal Cobbler","","Desserts",4.00,false,\N,1
+298,8,"Banana Pudding","","Desserts",4.00,false,\N,1
+299,8,"Mac and Cheese","","Snacks",2.50,false,\N,1
+300,8,"Collard Greens","","Snacks",2.50,false,\N,1
+301,8,"Baked Beans","","Snacks",2.50,false,\N,1
+302,8,"Dirty Rice","","Snacks",2.50,false,\N,1
+303,8,"Cole Slaw","","Snacks",2.50,false,\N,1
+304,8,"Green Beans","","Snacks",2.50,false,\N,1
+305,8,"Potato Salad","","Snacks",2.50,false,\N,1

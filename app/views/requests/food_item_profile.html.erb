@@ -17,7 +17,7 @@
                 			<% if !@size.nil? %>
                              <p><span class="icon fa-heart-o"> </span>
                                 <% @size.each do |f| %>
-                				   <%= f.size_descr %> ($<%= f.price %>) |
+                				   <%= f.size_descr %> ($<%= f.format_price %>) |
                                 <% end %>
                                 </p>
                             <% else %>

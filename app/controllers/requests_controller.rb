@@ -24,7 +24,7 @@ layout 'internal'
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
           @fava_user = fava_user
-          @requests = Request.all
+          @requests = Request.all.order('updated_at DESC')
       else
         redirect_to root_path
       end
@@ -45,7 +45,7 @@ layout 'internal'
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
       @fava_user = fava_user
-      @requests = Request.where(:fava_user_id => fava_user.id, :status => [0, 1]).all
+      @requests = Request.where(:fava_user_id => fava_user.id, :status => [0, 1]).all.order('updated_at DESC')
     else
       redirect_to root_path
     end
