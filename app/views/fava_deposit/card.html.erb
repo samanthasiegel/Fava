@@ -1,0 +1,55 @@
+<% provide(:title, "Food Item Profile") %>
+
+<article id="main">
+	<header>
+		<h2>Payment Information</h2>
+        
+              <span id="startchange"></span>
+			<section class="wrapper style5">
+					<div class="inner">
+						<h3>Enter Deposit Details</h3>
+					</div>s
+
+                    <%= form_for @payment do |f| %>
+						<div class="row uniform">
+							<h4> Enter your card details: </h4>							
+							<div class="12u$">
+								<%= f.text_field :card_name, class: 'form-control', placeholder:"Name on Card" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :card_number, class: 'form-control', placeholder:"Card Number" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :card_expiry_month, class: 'form-control', placeholder:"Expiry Month MM" %>
+								<%= f.text_field :card_expiry_year, class: 'form-control', placeholder:"Expiry Year YY" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :card_CVC, class: 'form-control', placeholder:"3 Digit CVC Code" %>
+							</div>
+							<h4> Enter your billing address: </h4>
+							<div class="12u$">
+								<%= f.text_field :street_address, class: 'form-control', placeholder:"Street Address" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :city, class: 'form-control', placeholder:"City" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :state, class: 'form-control', placeholder:"State" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :zip_code, class: 'form-control', placeholder:"Zip Code" %>
+							</div>
+							<h4> How much do you wish to deposit? </h4>
+							<div class="12u$">
+								<%= f.text_field :amount, class: 'form-control', placeholder:"Zip Code" %>
+							</div>
+							<div class="12u$">
+								<ul class="actions">
+									<li><%=f.submit "Post", class: "special" %></li>
+								</ul>
+							</div>
+						</div>
+					<% end %>
+			</section>
+	</header>
+</article>

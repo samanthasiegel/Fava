@@ -1,0 +1,2 @@
+module FavaDepositHelper
+end

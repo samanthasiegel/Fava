@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :fava_users
   resources :account_activations, only: [:edit]
   resources :posts
+  resources :payments
   root 'static_pages#home'
   get '/', to: 'static_pages#home'
   get '/signup', to: 'fava_users#new'
@@ -38,5 +39,9 @@ Rails.application.routes.draw do
   get '/my_requests', to: 'requests#my_requests'
   get '/my_history', to: 'requests#my_history'
   get '/my_deliveries', to: 'requests#my_deliveries'
+
+  get '/deposit', to: 'fava_deposit#index'
+  get '/deposit/flex', to: 'fava_deposit#flex'
+  get '/deposit/card', to: 'fava_deposit#card'
 
 end
