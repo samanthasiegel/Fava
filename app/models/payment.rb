@@ -17,16 +17,16 @@ class Payment < ApplicationRecord
 
   def ifFlex
   	if method == "flex"
-  		if cardNumber.length != 7
-  			errords.add(:cardNumber, 'unique ID must be 7 digits')
+  		if card_number.length != 7
+  			errors.add(:cardNumber, 'unique ID must be 7 digits')
   		end
   	end
   end
 
   def ifCard
   	if method == "card"
-  		if cardNumber.length != 16
-  			errords.add(:cardNumber, 'card number must be 16 digits')
+  		if card_number.length != 16
+  			errors.add(:cardNumber, 'card number must be 16 digits')
   		end
   	end
   end

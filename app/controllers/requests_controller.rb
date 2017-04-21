@@ -1,4 +1,4 @@
-fclass RequestsController < ApplicationController
+class RequestsController < ApplicationController
 layout 'internal'
   def index
     fava_user = FavaUser.find_by_id(session[:fava_user_id])

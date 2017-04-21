@@ -1,0 +1,38 @@
+<% provide(:title, "Fava Points Card Deposit") %>
+<article id="main">
+	<header>
+		<h2>Flex Deposit</h2>
+		<p>Deposit to your Fava Points account via Flex</p>
+	</header>
+	<section class="wrapper style5">
+		<div class="inner">
+			<% flash.each do |key, value| %>
+        		<div class="alert alert-<%= key %>"><%= value %></div>
+      		<% end %>
+			<%= form_for @payment do |f| %>
+						<div class="row uniform">
+							<h4> Enter your card details: </h4>	
+							<div class="12u$">
+								<%= f.text_field :method, class: 'form-control', value: @payment.method, :readonly => true%>
+							</div>							
+							<div class="12u$">
+								<%= f.text_field :card_name, class: 'form-control', placeholder:"Name on Card" %>
+							</div>
+							<div class="12u$">
+								<%= f.text_field :card_number, class: 'form-control', placeholder:"Unique ID" %>
+							</div>
+							<h4> How much do you wish to deposit? </h4>
+							<div class="12u$">
+								<%= f.text_field :amount, class: 'form-control', placeholder:"0.00" %>
+							</div>
+							<div class="12u$">
+								<ul class="actions">
+									<li><%=f.submit "Post", class: "special"%></li>
+								</ul>
+							</div>
+						</div>
+					<% end %>
+
+		</div>
+	</section>
+</article>

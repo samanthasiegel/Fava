@@ -1,18 +1,20 @@
-<% provide(:title, "Food Item Profile") %>
-
+<% provide(:title, "Fava Points Card Deposit") %>
 <article id="main">
 	<header>
-		<h2>Payment Information</h2>
-        
-              <span id="startchange"></span>
-			<section class="wrapper style5">
-					<div class="inner">
-						<h3>Enter Deposit Details</h3>
-					</div>s
-
-                    <%= form_for @payment do |f| %>
+		<h2>Debit/Credit Deposit</h2>
+		<p>Deposit to your Fava Points account via Debit/Credit Card</p>
+	</header>
+	<section class="wrapper style5">
+		<div class="inner">
+			<% flash.each do |key, value| %>
+        		<div class="alert alert-<%= key %>"><%= value %></div>
+      		<% end %>
+			<%= form_for @payment do |f| %>
 						<div class="row uniform">
-							<h4> Enter your card details: </h4>							
+							<h4> Enter your card details: </h4>
+							<div class="12u$">
+								<%= f.text_field :method, class: 'form-control', value: @payment.method, :readonly => true%>
+							</div>							
 							<div class="12u$">
 								<%= f.text_field :card_name, class: 'form-control', placeholder:"Name on Card" %>
 							</div>
@@ -21,6 +23,8 @@
 							</div>
 							<div class="12u$">
 								<%= f.text_field :card_expiry_month, class: 'form-control', placeholder:"Expiry Month MM" %>
+							</div>
+							<div class="12u$">
 								<%= f.text_field :card_expiry_year, class: 'form-control', placeholder:"Expiry Year YY" %>
 							</div>
 							<div class="12u$">
@@ -41,7 +45,7 @@
 							</div>
 							<h4> How much do you wish to deposit? </h4>
 							<div class="12u$">
-								<%= f.text_field :amount, class: 'form-control', placeholder:"Zip Code" %>
+								<%= f.text_field :amount, class: 'form-control', placeholder:"0.00" %>
 							</div>
 							<div class="12u$">
 								<ul class="actions">
@@ -50,6 +54,7 @@
 							</div>
 						</div>
 					<% end %>
-			</section>
-	</header>
+
+		</div>
+	</section>
 </article>

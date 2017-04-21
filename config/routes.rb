@@ -40,8 +40,8 @@ Rails.application.routes.draw do
   get '/my_history', to: 'requests#my_history'
   get '/my_deliveries', to: 'requests#my_deliveries'
 
-  get '/deposit', to: 'fava_deposit#index'
-  get '/deposit/flex', to: 'fava_deposit#flex'
-  get '/deposit/card', to: 'fava_deposit#card'
+  get '/deposit', to: 'payments#index'
+  get '/deposit/flex', to: 'payments#flex'
+  get '/deposit/card', to: 'payments#card'
 
 end
