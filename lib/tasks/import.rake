@@ -16,6 +16,20 @@ namespace :import do
 		puts "Imported #{counter} restaurants"
 	end
 
+	desc "Import restaurants from csv"
+	task restaurants_balt: :environment do
+		filename = File.join Rails.root, "restaurants_balt.csv"
+		counter = 0;
+		CSV.foreach(filename) do |row|
+			name, zip, neighborhood, council, politce, location = row
+			r = Restaurant.new(name: name, location: location, open_hour: "0000", close_hour: "2400") 
+			r.save!
+			puts "#{name} - #{r.errors.full_messages.join(',')}" if r.errors.any?
+			counter += 1 if r.persisted?
+		end
+		puts "Imported #{counter} restaurants"
+	end
+
 	#import food items and connect to restaurants
 	desc "Import food items from csv"
 	task food_items: :environment do
