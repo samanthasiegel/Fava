@@ -53,9 +53,9 @@ layout 'internal'
   				:card_CVC => payment_params[:card_CVC], :street_address => payment_params[:street_address], 
   				:city => payment_params[:city], :state => payment_params[:state], 
   				:zip_code => payment_params[:zip_code], :amount => payment_params[:amount])
-  			  	fava_user_balance = @fava_user.fava_points
-  				fava_user_new_balance = fava_user_balance + payment_params[:amount].to_f
-				@fava_user.update(fava_points: fava_user_new_balance)
+  			  	balance = @fava_user.fava_points
+  				new_balance = balance + payment_params[:amount].to_f
+				@fava_user.update(fava_points: new_balance)
   		end
   	else
   		raise "error"
