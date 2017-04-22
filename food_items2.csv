@@ -256,7 +256,7 @@
 287,7,"Mango Sorbetto","","Desserts",4.00,true,"soybeans",2
 288,7,"Mixed Berries Sorbetto","","Desserts",4.00,true,"soybeans",2
 289,8,"Breakfast Blue Plate","Scrambled eggs with biscuit or toast","Breakfast Foods",7.00,false,"eggs",1
-290,8,"Two Biscuits with Gravy","","Breakfast Foods",4.00,false,\N,0
+290,8,"Two Biscuits with Gravy","","Breakfast Foods",4.00,false,"gluten",0
 291,8,"Omelets to Order","Local free range two egg omelet with your choice of fillings (specify in notes), plus a biscuit or toast","Breakfast Foods",8.00,false,"eggs",1
 292,8,"Fried Chicken","Served with one side","Chicken",7.00,true,\N,0
 293,8,"Pulled Pork BBQ Sandwich","Served with one side","Sandwich",8.00,false,\N,0
@@ -278,3 +278,57 @@
 309,9,"NY Strip","Served with one side","Meat",10.00,true,\N,0
 310,9,"Bone in Pork Chop","Brined in-house and grilled to order","Meat",10.00,true,\N,0
 311,9,"Rotisserie Chicken","","Chicken",7.00,true,\N,0
+312,9,"Salmon","","Fish",12.00,false,\N,0
+313,9,"Mahi Mahi","","Fish",12.00,false,\N,0
+314,9,"Yellow Fin Tuna","","Fish",12.00,false,\N,0
+315,9,"Garlic Mashed Potatoes","","Snacks",3.00,true,"dairy",1
+316,9,"Roasted Seasonal Vegetables","","Snacks",3.00,true,\N,2
+317,9,"Steamed Broccoli","","Snacks",3.00,true,\N,2
+318,9,"Beer Battered Onion Rings","","Snacks",3.00,true,\N,1
+319,9,"Classic Caesar Salad","Romaine, parmesan, croutons, caesar dressing","Salads",5.00,false,"fish",0
+320,9,"Spinach and Pear Salad","Baby spinach, pickled red onions, d'anjou pears with red wine vinaigrette","Salads",6.00,false,\N,1
+321,9,"Apple and Fennel Chopped Salad","Apple, fennel, arugula, romaine, almonds and dried cranberries with white wine vinaigrette","Salads",6.00,false,"nuts",1
+322,9,"Paella Mixta","Shrimp, chorizo, chicken, roasted peppers, tomatoes and peas","Fish",8.00,true,"shellfish",0
+323,9,"Paella con Verduras","Seasonal vegeables, red peppers, green beans, tomatoes, and artichoke hearts","Salads",7.00,true,\N,2
+324,9,"La Marinera","Shrimp, calamari, clams and market catch with roasted red peppers and tomatoes","Fish",8.00,true,"shellfish",0
+325,9,"Prime Rib Steak Sandwich","On toasted baguette with horseradish swiss, mushrooms, and onions. Served with one side","Sandwiches",9.00,false,\N,0
+326,9,"Chop House Steak Burger","Made in house with ground sirloin, grilled to order, served on a brioche bun with lettuce and tomato. Served with one side","Sandwiches",9.00,false,\N,0
+327,9,"Marinated Grilled Chicken Breast Sandwich","Grilled to order and served on brioche bun with lettuce and tomato. Served with one side","Sandwiches",8.00,false,\N,0
+328,9,"Flourless Chocolate Torte","","Desserts",5.00,false,\N,1
+329,9,"Carrot Cake","","Desserts",5.00,false,\N,1
+330,9,"Tiramisu","","Desserts",5.00,false,\N,1
+331,10,"Farmers Market Breakfast","Farm fresh local eggs cooked to order with choice of hashbrown or grits, and biscuit or toast","Breakfast Foods",6.00,false,\N,1
+332,10,"Chorizo Hash","Firsthand Food's chorizo, potatoes and onions with two eggs cooked your way. Choice of toast or biscuit","Breakfast Foods",6.00,false,\N,0
+333,10,"Tofu Scramble","With spinach, onions and tomatoes. Choice of toast or biscuit","Breakfast Foods",5.00,false,\N,0
+334,10,"Granola and Fresh Fruit Plate","Our house made granola of oats, golden raisins and honey served with milk or yogurt and fresh fruit","Breakfast Foods",6.00,false,\N,1
+335,10,"Cuban Sandwich","Ham and roasted pork loin with spicy mustard, swiss cheese, and pickles","Sandwiches",7.00,false,"dairy",0
+336,10,"Roasted Veggie Panini","Yellow squash, zucchini and oven roasted tomatoes, fresh mozzarella with lemon aioli","Sandwiches",7.00,false,"gluten, dairy",1
+337,10,"BLT and Egg Sandwich","Bacon, lettuce, and tomato on toasted whole wheat plus two eggs cooked to order","Sandwiches",7.00,false,"eggs",0
+338,10,"Hot Pastrami Sandwich","With swiss cheese and yellow mustard on rye","Sandwiches",7.00,false,"dairy",0
+339,10,"Falafel on Pita","Ground chick peas with tzatziki sauce, lettuce and tomato","Sandwiches",7.00,false,"dairy",1
+340,10,"Smoked Brisket Sandwich","With carmelized onions and apple barbecue sauce","Sandwiches",8.00,false,\N,0
+341,10,"Veggie Burger","Morning Star Veggie Griller on challah roll with pickles, lettuce, and onions","Sandwiches",7.00,false,\N,1
+342,10,"De Novo Burger","Ground beef patty on challah with lettuce and tomato","Sandwiches",8.00,false,"dairy",0
+343,10,"Grilled Chicken on Pita","Grilled chicken breast on soft whole grain pita","Sandwiches",7.00,false,"dairy",0
+344,10,"Grilled Cheese Sandwich","Cheddar cheese on sourdough","Sandwiches",10.00,false,"dairy",1
+345,10,"Hummus Plate","Hummus, bruschetta tomatoes and black olive tapenade","Salads",7.00,false,\N,1
+346,10,"Seared Salmon Caesar Salad","Cripsy romaine with Caesar dressing, pan seared salmon, and croutons","Salads",7.00,false,"dairy, fish",0
+347,10,"Sesame Noodle Salad","With snow peas, carrots, sweet peppers and tofu","Salads",7.00,false,\N,1
+348,10,"Deli Salad Platter","Served over organic greens with a side of fruit and baguette bread","Salads",7.00,false,\N,0
+349,10,"Salad Nicoise","With haricots verts, tomatoes, boiled egg, black olives, potatoes and tuna","Salads",8.00,false,\N,0
+350,10,"The Little Green Salad","Organic baby greens tossed with red wine vinaigrette","Salads",2.00,false,\N,2
+351,10,"Espresso Shot","","Coffee/Hot Drinks",1.80,true,\N,1
+352,10,"Espresso Macchiato","","Coffee/Hot Drinks",2.25,true,\N,1
+353,10,"Cafe Latte","","Coffee/Hot Drinks",3.10,true,\N,1
+354,10,"Cappuccino","","Coffee/Hot Drinks",3.05,true,\N,1
+355,10,"Cafe Mocha","","Coffee/Hot Drinks",3.45,true,\N,1
+356,10,"White Chocolate Mocha","","Coffee/Hot Drinks",3.65,true,\N,1
+357,10,"Cafe Americano","","Coffee/Hot Drinks",2.25,true,\N,1
+358,10,"Caramel Macchiato","","Coffee/Hot Drinks",3.65,true,\N,1
+359,10,"Cafe au Lait","","Coffee/Hot Drinks",2.30,true,\N,1
+360,10,"Hot Tea","","Coffee/Hot Drinks",2.15,false,\N,1
+361,10,"Chai Latte","","Coffe/Hot Drinks",3.35,true,\N,1
+362,10,"Hot Chocolate","","Coffe/Hot Drinks",2.95,true,\N,1
+363,10,"Hot White Chocolate","","Coffee/Hot Drinks",3.35,true,\N,1
+364,10,"Cider","","Coffee/Hot Drinks",3.30,true,\N,1
+365,10,"Iced Coffee","","Coffee/Hot Drinks",2.10,true,\N,1
