@@ -8,6 +8,9 @@ class Request < ApplicationRecord
   validates :notes, length: { maximum: 250 }
   validates :location, presence:true
 
+  validate :find_poster
+  validate :find_claimer
+
 
   # # # # # # # Checks for attributes # # # # # # #
 
@@ -30,6 +33,13 @@ class Request < ApplicationRecord
       errors.add(:fava_user_id, 'this user does not exist')
     end
   end
+
+  def find_claimer
+    if !claimer.nil? and FavaUser.find_by_id(claimer)
+      errors.add(:claimer, "Claimer does not exist")
+    end
+  end
+
 
 
   # # # # # # # # Methods # # # # # # # #

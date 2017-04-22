@@ -5,8 +5,11 @@ class FavaUser < ApplicationRecord
 	validates :first_name, presence: true
 	validates :last_name, presence: true
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@duke.edu+\z/i
+	VALID_PHONE_REGEX = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+	# Validates that email is @duke.edu
 	validates :email, presence:true, length:{maximum:255}, format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-	validates :phone, presence:true, :numericality => true, length:{is: 10}
+	# Validates phone number entry
+	validates :phone, presence:true, length:{minimum: 10}, format: {with:VALID_PHONE_REGEX}
 	has_secure_password
 
 	def format_points()
@@ -56,8 +59,6 @@ class FavaUser < ApplicationRecord
 			self.activation_token = FavaUser.new_token
 			self.activation_digest = FavaUser.digest(activation_token)
 		end
-
-
 		
 
 end

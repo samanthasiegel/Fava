@@ -6,7 +6,7 @@ class Restaurant < ApplicationRecord
 	before_create :unique_rest
 
 	# Prevents updating/destroying restaurants with existing food items
-	before_destroy :check_food_exists
+	before_destroy :check_food_before_destroy
 	before_update :check_food_exists
 	validate :check_food_exists
 
@@ -33,10 +33,19 @@ class Restaurant < ApplicationRecord
 	end
 
 	def check_food_exists
-		if id_was != id and FoodItem.where(:id => id_was).size > 0
+		if id_was != id and food_items.size > 0
 			p "Cannot change id of restaurant with existing food items"
 			errors.add(:food_items, "Cannot change id of restaurant with existing food items")
 			return false
+		end
+	end
+
+	# deletes all food upon destroy
+	def check_food_before_destroy
+		if food_items.size > 0
+			for i in 0..food_items.size-1
+				FoodItem.destroy(food_items[i].id)
+			end
 		end
 	end
 
