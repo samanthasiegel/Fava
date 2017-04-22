@@ -67,7 +67,7 @@ namespace :import do
 		counter = 0;
 		CSV.foreach(filename) do |row|
 			f_id, restaurant, food_name, description, category, price, size, allergy_info, dietary_info = row
-			f = FoodItem.new(rest: restaurant, food_name: food_name, description: description, category: category,
+			f = FoodItem.new(restaurant_id: restaurant, food_name: food_name, description: description, category: category,
 				price: price, size: size, allergy_info: allergy_info, dietary_info: dietary_info)
 			f.id = f_id
 			f.save!

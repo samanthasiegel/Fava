@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422201232) do
+ActiveRecord::Schema.define(version: 20170422212136) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -35,15 +35,15 @@ ActiveRecord::Schema.define(version: 20170422201232) do
   end
 
   create_table "food_items", force: :cascade do |t|
+    t.integer "restaurant_id"
     t.string  "food_name"
     t.string  "description"
     t.string  "category"
-    t.float   "price"
-    t.boolean "size"
+    t.string  "price"
     t.string  "allergy_info"
     t.integer "dietary_info"
-    t.integer "Restaurant_id"
-    t.integer "rest"
+    t.boolean "size"
+    t.index ["restaurant_id"], name: "index_food_items_on_restaurant_id"
   end
 
   create_table "payments", force: :cascade do |t|

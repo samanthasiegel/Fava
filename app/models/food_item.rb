@@ -1,6 +1,7 @@
 class FoodItem < ApplicationRecord
 
 	has_many :sides
+	has_one :restaurant
 	validates :food_name, presence:true
 	validates :price, presence:true, :numericality => true
 	validates :category, presence:true
@@ -36,15 +37,15 @@ class FoodItem < ApplicationRecord
   	end
 
   	def check_restaurant
-  		if Restaurant.find_by_id(rest).nil?
-  		 	errors.add(:rest, 'restaurant does not exist')
+  		if Restaurant.find_by_id(restaurant_id).nil?
+  		 	errors.add(:restaurant_id, 'restaurant does not exist')
   		end
   	end
 
 	def unique_at_restaurant
 		FoodItem.where(:food_name => food_name).all.each do |f|
-			if f.id != id and f.rest == rest and f.size == size
-				errors.add(:rest, 'not a unique entry for this restaurant')
+			if f.id != id and f.restaurant_id == restaurant_id and f.size == size
+				errors.add(:restaurant_id, 'not a unique entry for this restaurant')
 			end
 		end
 		
