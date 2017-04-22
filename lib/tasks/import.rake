@@ -16,12 +16,26 @@ namespace :import do
 		puts "Imported #{counter} restaurants"
 	end
 
-	desc "Import restaurants from csv"
+	desc "Import restaurants_balt from csv"
 	task restaurants_balt: :environment do
 		filename = File.join Rails.root, "restaurants_balt.csv"
 		counter = 0;
 		CSV.foreach(filename) do |row|
 			name, zip, neighborhood, council, politce, location = row
+			r = Restaurant.new(name: name, location: location, open_hour: "0000", close_hour: "2400") 
+			r.save!
+			puts "#{name} - #{r.errors.full_messages.join(',')}" if r.errors.any?
+			counter += 1 if r.persisted?
+		end
+		puts "Imported #{counter} restaurants"
+	end
+
+	desc "Import restaurants_wake from csv"
+	task restaurants_wake: :environment do
+		filename = File.join Rails.root, "restaurants_wake.csv"
+		counter = 0;
+		CSV.foreach(filename) do |row|
+			oid, hsid, name, location = row
 			r = Restaurant.new(name: name, location: location, open_hour: "0000", close_hour: "2400") 
 			r.save!
 			puts "#{name} - #{r.errors.full_messages.join(',')}" if r.errors.any?
