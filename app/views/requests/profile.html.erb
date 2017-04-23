@@ -7,12 +7,13 @@
 		
 		<span id="startchange"></span>
 		<section class="wrapper style5">
-				<div class="left">
+				<div class="inner" style="float:center;">
+					<img src='https://studentaffairs.duke.edu/sites/default/files/u110/Sammi%20.jpg' style="float:center; height:175px; width:175px; border-radius: 100%; margin-bottom: 20px;" />
 					<p><b>Name:</b> <%=@fname%> <%=@lname%></p>
 					<p><b>Current Email Address:</b> <%=@email%></p>
 					<p><b>Member since:</b> <%=@user_since.to_formatted_s(:long_ordinal)%></p>
-					<p><b>Total number of posts:</b></p>
-					<p><b>Total number of deliveries:</b></p>
+					<p><b>Total number of posts:</b> <%=@num_post%></p>
+					<p><b>Total number of deliveries: <%=@num_dev%></b></p>
 					<h3>Current Balance: <%=@balance%></h3>
 				</div>
 				<button class="special" href="#">
