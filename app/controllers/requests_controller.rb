@@ -282,8 +282,20 @@ layout 'internal'
       fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
           @fava_user = fava_user
-          #@restaurant = Restaurant.find_by_id(params[:restaurant])
-          #@food_items = FoodItem.where(:restaurant_id => params[:restaurant])
+	  @fname = @fava_user.first_name
+	  @lname = @fava_user.last_name
+	  @email = @fava_user.email
+	  @user_since = @fava_user.created_at
+	  @balance = @fava_user.fava_points
+      else
+        redirect_to root_path
+      end
+  end
+
+  def change_password
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+          @fava_user = fava_user
       else
         redirect_to root_path
       end

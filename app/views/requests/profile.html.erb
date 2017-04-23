@@ -7,8 +7,20 @@
 		
 		<span id="startchange"></span>
 		<section class="wrapper style5">
-				
-		
+				<div class="left">
+					<p><b>Name:</b> <%=@fname%> <%=@lname%></p>
+					<p><b>Current Email Address:</b> <%=@email%></p>
+					<p><b>Member since:</b> <%=@user_since.to_formatted_s(:long_ordinal)%></p>
+					<p><b>Total number of posts:</b></p>
+					<p><b>Total number of deliveries:</b></p>
+					<h3>Current Balance: <%=@balance%></h3>
+				</div>
+				<button class="special" href="#">
+                    <%= link_to "Make a Deposit", "/deposit" %>
+                </button>
+                <button class="special" href="#">
+                        <%= link_to "Change Password", "/profile/change_password" %>
+                </button>
 		</section>
 		
 	</header>
