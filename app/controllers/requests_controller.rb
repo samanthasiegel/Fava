@@ -13,8 +13,8 @@ layout 'internal'
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
     if fava_user && fava_user.activated
        @fava_user = fava_user
-  	   @request = Request.new
-  	   @restaurants = Restaurant.all
+       @request = Request.new
+       @restaurants = Restaurant.all
     else
         redirect_to root_path
     end
@@ -158,9 +158,9 @@ layout 'internal'
           @fava_user = fava_user
           @food_item = FoodItem.find_by_id(params[:food_item])
           if @food_item.price > fava_user.fava_points
-          	@broke_message = true
+            @broke_message = true
           else
-          	@broke_message = false
+            @broke_message = false
           end
           p @broke_message
           @restaurant = Restaurant.find_by_id(@food_item.restaurant_id)
@@ -249,6 +249,7 @@ layout 'internal'
         @fava_user = fava_user
         if params[:food_item] != nil
           @food_item = FoodItem.find_by_id(params[:food_item])
+          @msg = params[:msg]
           @restaurant = Restaurant.find_by_id(@food_item.restaurant_id)
           @sides = Side.where(:food_item_id => @food_item.id)
           @sizes = Size.where(:food_item_id => @food_item.id)
@@ -272,52 +273,49 @@ layout 'internal'
         @fava_user = FavaUser.find_by_id(session[:fava_user_id])
         @restaurant = Restaurant.find_by_id(request_params[:restaurant_id])
         @food_item = FoodItem.find_by_id(request_params[:food_item_id])
-        #find a way to save sides
-        #fix this!!
+        
         @side = Side.find_by_id(request_params[:side_id])
         @size = Size.find_by_id(request_params[:size_id])
-        if(!@side.nil?)
-          @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0, :side_id => @side.id)
-          if(!@size.nil?)
-            @request.size_id = @size.id
-          end
-          @request.save
-          @request.errors.full_messages
-        else
-          @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
-          if(!@size.nil?)
-            @request.size_id = @size.id
-          end
-          @request.save
-          @request.errors.full_messages
-        end
-      else
-        raise "error"
-      end
-      respond_to do |format|
-        flash.now[:info] = "Your request has been posted"
-        flash.keep
-        format.html {redirect_to timeline_path}
-      end
 
-   #  restaurant_id = Restaurant.where(:name => params[:restaurant_name])
-   #  food_id = FoodItem.where(:food_name => params[:food_name], :Restaurant_id => restaurant_id)
-   #  @post = Post.new(FoodItem_id: food_id, )
-	  # respond_to do |format|
-	  #   flash.now[:info] = "Your request has been posted"
-	  #   format.html {redirect_to timeline_path}
-	  #  end
+        if !is_number?(request_params[:tip]) or request_params[:tip].nil?
+          redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 1
+        elsif request_params[:location].nil? or request_params[:location].length == 0
+          redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 2
+        else
+
+          if(!@side.nil?)
+            @request = Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0, :side_id => @side.id)
+            if(!@size.nil?)
+              @request.size_id = @size.id
+            end
+            @request.save
+            @request.errors.full_messages
+          else
+            @request =Request.new(:fava_user_id => @fava_user.id, :food_item_id => @food_item.id, :location => request_params[:location], :tip => request_params[:tip], :notes => request_params[:notes], :status => 0)
+            if(!@size.nil?)
+              @request.size_id = @size.id
+            end
+            @request.save
+            @request.errors.full_messages
+          end
+          flash.now[:info] = "Your request has been posted"
+          flash.keep
+          redirect_to timeline_path
+        end
+        else
+          raise "error"
+        end
   end
 
   def profile
       fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
           @fava_user = fava_user
-	        @fname = @fava_user.first_name
-	        @lname = @fava_user.last_name
-	        @email = @fava_user.email
-	        @user_since = @fava_user.created_at
-	        @balance = @fava_user.format_points()
+          @fname = @fava_user.first_name
+          @lname = @fava_user.last_name
+          @email = @fava_user.email
+          @user_since = @fava_user.created_at
+          @balance = @fava_user.format_points()
           @num_post = Request.where(:fava_user_id => fava_user.id).count
           @num_dev = Request.where(:claimer => fava_user.id, :status => 2).count
       else
