@@ -1,0 +1,19 @@
+<% provide(:title, "Search by Keyword") %>
+
+<article id="main">
+	<header>
+		<h2>Search By Keyword </h2>
+        <p> Search through food items by keyword </p>
+        <span id="startchange"></span>
+
+			<section class="wrapper style5">
+            	<%= form_tag(search_path, :method => "get", id: "search-form") do %>
+            			<div class="12u$" style="text-align: center; margin-left:300px; padding-bottom:50px;">
+    				<%= text_field_tag :search, params[:search], placeholder: "Search Foods", :style =>"width:800px;"%>
+    				</div>
+    				<%= submit_tag "Search", :name => nil, :style=>"color:blue;" %>
+    				
+			<% end %>
+			</section>
+	</header>
+</article>

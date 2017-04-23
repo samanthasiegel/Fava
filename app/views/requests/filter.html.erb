@@ -4,14 +4,12 @@
 	<header>
 		<h2>Search By Category </h2>
         <p> Filter through food items by category </p>
+        <span id="startchange"></span>
+
 			<section class="wrapper style5">
-					<p><%=link_to "Burgers", filter_by_cat_path(category: "Burgers") %> </p>
-                    <p><%=link_to "Desserts", filter_by_cat_path(category:"Desserts") %> </p>
-                    <p><%=link_to "Drinks", filter_by_cat_path(category:"Drinks") %> </p>
-                    <p><%=link_to "Salads", filter_by_cat_path(category:"Salads") %> </p>
-                    <p><%=link_to "Sandwiches", filter_by_cat_path(category:"Sandwiches") %> </p>
-                    <p><%=link_to "Snacks", filter_by_cat_path(category:"Snacks") %> </p>
-                    <p><%=link_to "Wraps", filter_by_cat_path(category:"Wraps") %> </p>
+                    <% Category.all.order('name ASC').each do |c| %>
+					   <p><%= link_to c.name, filter_by_cat_path(category: c.id) %> </p>
+                    <% end %>
 			</section>
 	</header>
 </article>

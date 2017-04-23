@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   post '/requests', to:'requests#create'
   get '/filter', to: 'requests#filter'
   get '/filter_by_cat', to: 'requests#filter_by_cat'
+  get '/search_by_keyword', to: 'requests#search_by_keyword'
+  get '/search', to: 'requests#search'
   get '/accept_request', to: 'requests#accept_request'
   get '/confirm_accept', to: 'requests#confirm_accept'
 

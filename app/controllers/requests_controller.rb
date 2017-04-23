@@ -203,13 +203,44 @@ layout 'internal'
   end
 
   def filter
-    
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+      else
+        redirect_to root_path
+      end
   end
 
   def filter_by_cat
-      @fava_user = fava_user
-       @food_items = FoodItem.where(:category => params[:category])
-        @category = params[:category]
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+        category = Category.find_by_id(params[:category])
+        @food_items = FoodItem.where(:category => category.name)
+        @category = category.name
+      else
+        redirect_to root_path
+      end
+  end
+
+   def search_by_keyword
+     fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+      else
+        redirect_to root_path
+      end
+  end
+
+  def search
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+        @search = params[:search]
+        @food_items = FoodItem.where("food_name like ?", "%#{@search}%")
+      else
+        redirect_to root_path
+      end
   end
 
   def order
