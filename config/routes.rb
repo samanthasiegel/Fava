@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get '/search', to: 'requests#search'
   get '/accept_request', to: 'requests#accept_request'
   get '/confirm_accept', to: 'requests#confirm_accept'
-
+  get '/delete_request', to:'requests#delete_request'
 
   get '/my_requests', to: 'requests#my_requests'
   get '/my_history', to: 'requests#my_history'

@@ -6,7 +6,10 @@
 		
               <span id="startchange"></span>
 			<section class="wrapper style5">
-				<h2 style="margin-top:-50px; font-size:20px;"><%= @restaurant.name %> </h2>
+				<% if !@msg.nil? %>
+					<h2 style="text-align:center; font-size:18px; color:red"> This restaurant is closed right now. </h2>
+				<% end %>
+				<h2 style="font-size:20px;"><%= @restaurant.name %> </h2>
 				<p> Click on an item for more information, or to place an order for it! </p>
 				<% @food_items.each do |f| %>
 					<div class="inner">

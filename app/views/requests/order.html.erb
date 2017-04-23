@@ -13,6 +13,8 @@
       				<h2 style="text-align:center; color:red; font-size:18px;"> Invalid tip entry.</h2>
       			<% elsif !@msg.nil? and @msg == '2' %>
       				<h2 style="text-align:center; color:red; font-size:18px;"> Invalid location entry.</h2>
+      			<% elsif !@msg.nil? and @msg == '3' %>
+      				<h2 style="text-align:center; color:red; font-size:18px;"> This restaurant is not open right now. Can't order food.</h2>
       			<% end %>
       		
 			<%= form_for @request do |f| %>

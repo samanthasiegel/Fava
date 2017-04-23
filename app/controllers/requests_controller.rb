@@ -1,4 +1,6 @@
 class RequestsController < ApplicationController
+require 'date'
+
 layout 'internal'
   def index
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
@@ -145,6 +147,12 @@ layout 'internal'
           @fava_user = fava_user
           @restaurant = Restaurant.find_by_id(params[:restaurant])
           @food_items = FoodItem.where(:restaurant_id => params[:restaurant])
+          current_time = DateTime.now.strftime("%H:%M")
+          current_hour = current_time[0..1]
+          current_minute = current_time[3..4]
+          if !((current_hour+current_minute) >= @restaurant.open_hour and (current_hour+current_minute) <= @restaurant.close_hour)
+            @msg = true
+          end
 
       else
         redirect_to root_path
@@ -232,6 +240,19 @@ layout 'internal'
       end
   end
 
+  def delete_request
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+        @fava_user = fava_user
+        @request = Request.find_by_id(params[:request])
+        @request.destroy
+        redirect_to my_requests_path
+
+      else
+        redirect_to root_path
+      end
+  end
+
   def search
     fava_user = FavaUser.find_by_id(session[:fava_user_id])
       if fava_user && fava_user.activated
@@ -276,11 +297,16 @@ layout 'internal'
         
         @side = Side.find_by_id(request_params[:side_id])
         @size = Size.find_by_id(request_params[:size_id])
+        current_time = DateTime.now.strftime("%H:%M")
+        current_hour = current_time[0..1]
+        current_minute = current_time[3..4]
 
         if !is_number?(request_params[:tip]) or request_params[:tip].nil?
           redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 1
         elsif request_params[:location].nil? or request_params[:location].length == 0
           redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 2
+        elsif !(current_hour + current_minute >= @restaurant.open_hour and current_hour + current_minute <= @restaurant.close_hour)
+          redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 3
         else
 
           if(!@side.nil?)
