@@ -9,11 +9,13 @@
 git clone https://github.com/samanthasiegel/Fava.git
 
 <h2> Building </h2>
-<p><b>NOTE:</b> You must have RUby on Rails installed on your system to continue. If you do not have Ruby on Rails installed, <a href="http://railsapps.github.io/installrubyonrails-ubuntu.html">here</a> is an installation guide.</p>
+<p><b>NOTE:</b> You must have Ruby on Rails installed on your system to continue. If you do not have Ruby on Rails installed, <a href="http://railsapps.github.io/installrubyonrails-ubuntu.html">here</a> is an installation guide.</p>
 
-<p> Install the dependencies, as specified in the Gemfile: </p>
+<p> 1. Install the dependencies, as specified in the Gemfile: </p>
 <p> bundle install </p>
-<p> Import the CSV files to initialize database tables: </p>
+<p> 2. Create the database tables with Rails migrations: </p>
+<p> rake db:migrate </p>
+<p> 3. Import the CSV files to initialize database tables: </p>
 <p> rake import:restaurants </p>
 <p> rake import:food_items</p>
 <p> rake import:sizes</p>
