@@ -317,7 +317,7 @@ layout 'internal'
 	        @lname = @fava_user.last_name
 	        @email = @fava_user.email
 	        @user_since = @fava_user.created_at
-	        @balance = @fava_user.fava_points
+	        @balance = @fava_user.format_points()
           @num_post = Request.where(:fava_user_id => fava_user.id).count
           @num_dev = Request.where(:claimer => fava_user.id, :status => 2).count
       else
@@ -335,8 +335,47 @@ layout 'internal'
   end
 
 
+  def is_number? string
+    true if Float(string) rescue false
+  end
+
+  def submit_new_password
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+
+      if fava_user && fava_user.activated
+          @fava_user = fava_user
+          p @fava_user.pin
+          p pin_params[:curr_pin]
+          if @fava_user.pin != pin_params[:curr_pin]
+            flash.now[:danger] = 'Invalid pin.'
+            render 'change_password'
+          elsif pin_params[:new_pin]!=pin_params[:new_pin_confirmation]
+            flash.now[:danger] = "Pins don't match."
+            render 'change_password'
+          elsif pin_params[:new_pin].length != 4
+            flash.now[:danger] = "Pin must be 4 digits long."
+            render 'change_password'
+          elsif !is_number? (pin_params[:new_pin])
+            flash.now[:danger] = "Pin must contain only digits."
+            render 'change_password'
+          else
+          @fava_user.update(pin: pin_params[:new_pin])
+          @fava_user.save!
+          flash.now[:notice] = "Pin successfully changed!"
+          redirect_to profile_path
+        end
+
+      else
+        redirect_to root_path
+      end
+  end
+
+
   def request_params
       params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side_id, :size_id)
+  end
 
+  def pin_params
+    params.require(:fava_user).permit(:curr_pin, :new_pin, :new_pin_confirmation)
   end
 end

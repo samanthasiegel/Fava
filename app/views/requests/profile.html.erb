@@ -7,6 +7,9 @@
 		
 		<span id="startchange"></span>
 		<section class="wrapper style5">
+				<% if !@message.nil? %>
+					<p style="color:green;"> @message </p>
+				<% end %>
 				<div class="inner" style="float:center;">
 					<img src='https://studentaffairs.duke.edu/sites/default/files/u110/Sammi%20.jpg' style="float:center; height:175px; width:175px; border-radius: 100%; margin-bottom: 20px;" />
 					<p><b>Name:</b> <%=@fname%> <%=@lname%></p>
@@ -20,7 +23,7 @@
                     <%= link_to "Make a Deposit", "/deposit" %>
                 </button>
                 <button class="special" href="#">
-                        <%= link_to "Change Password", "/profile/change_password" %>
+                        <%= link_to "Change Pin", "/profile/change_password" %>
                 </button>
 		</section>
 		

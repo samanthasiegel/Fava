@@ -48,5 +48,6 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'requests#profile'
   get '/profile/change_password', to: 'requests#change_password'
+  patch '/submit_new_password', to: 'requests#submit_new_password'
 
 end
