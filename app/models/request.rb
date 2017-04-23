@@ -35,7 +35,7 @@ class Request < ApplicationRecord
   end
 
   def find_claimer
-    if !claimer.nil? and FavaUser.find_by_id(claimer)
+    if !claimer.nil? and FavaUser.find_by_id(claimer).nil?
       errors.add(:claimer, "Claimer does not exist")
     end
   end
@@ -55,6 +55,11 @@ class Request < ApplicationRecord
   def get_user_name
     user = FavaUser.find_by_id(fava_user_id)
     return user.first_name + " " + user.last_name
+  end
+
+  def get_claimer_name
+    c = FavaUser.find_by_id(claimer)
+    return c.first_name + " " + c.last_name
   end
 
   def get_restaurant_name

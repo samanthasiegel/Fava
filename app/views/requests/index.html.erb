@@ -38,8 +38,10 @@
                                 </span>
                             <% end %>
                             </p>
-                            <%= button_to "Accept", accept_request_path, method: :get, params: {request: r.id}, :class => "button small", :style => "color:rgba(63, 191, 63, 0.9); margin-left:120px;" %>
-                            <!-- <a href="#" class="button small" style="margin-left:120px; color:rgba(71, 234, 71, 0.9);">Accept</a> --> 
+                            <% if r.fava_user_id != @fava_user.id %>
+                                <%= button_to "Accept", accept_request_path, method: :get, params: {request: r.id}, :class => "button small", :style => "color:rgba(63, 191, 63, 0.9); margin-left:120px;" %>
+                                <!-- <a href="#" class="button small" style="margin-left:120px; color:rgba(71, 234, 71, 0.9);">Accept</a> --> 
+                            <% end %>
 
                             <hr />
                         <% end %>

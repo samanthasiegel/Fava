@@ -68,6 +68,7 @@ layout 'internal'
     if fava_user && fava_user.activated
       @fava_user = fava_user
       @requests = Request.where(:claimer => fava_user.id).order(:status, :created_at)
+      p @requests
     else
       redirect_to root_path
     end
