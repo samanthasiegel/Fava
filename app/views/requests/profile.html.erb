@@ -18,14 +18,19 @@
 					<p><b>Total number of posts:</b> <%=@num_post%></p>
 					<p><b>Total number of deliveries: <%=@num_dev%></b></p>
 					<h3>Current Balance: <%=@balance%></h3>
-				</div>
-				<button class="special" href="#">
-                    <%= link_to "Make a Deposit", "/deposit" %>
-                </button>
-                <button class="special" href="#">
-                        <%= link_to "Change Pin", "/profile/change_password" %>
-                </button>
-		</section>
+
+					<button class="special" href="#">
+	                    <%= link_to "Make a Deposit", "/deposit" %>
+	                </button>
+	                <button class="special" href="#">
+	                        <%= link_to "Change Pin", "/profile/change_password" %>
+	                </button>
+					<hr />
+					<h3> Favorite food items: </h3>
+					<% @fav_items.each do |f| %>
+						<p> <%= FoodItem.find_by_id(f[0]).food_name %></p>
+					<% end %>
+					</div> </section> 
 		
 	</header>
 </article>

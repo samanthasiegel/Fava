@@ -344,6 +344,10 @@ layout 'internal'
           @balance = @fava_user.format_points()
           @num_post = Request.where(:fava_user_id => fava_user.id).count
           @num_dev = Request.where(:claimer => fava_user.id, :status => 2).count
+          @fav_items = Request.where(:fava_user_id => fava_user.id).group(:food_item_id).count.sort {|a,b| a[1] <=> b[1]}.reverse.first(3)
+
+          p @fav_items
+
       else
         redirect_to root_path
       end
