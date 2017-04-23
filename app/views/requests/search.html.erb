@@ -12,6 +12,10 @@
 						<%= link_to f.food_name, food_item_profile_path(food_item: f.id) %>
 					</div>
 				<% end %>
+				<p></p>
+				<button class="special" href="#">
+                    <%= link_to "Searh for Another Item", "/search_by_keyword" %>
+                </button>
 			</section>
 		
 	</header>
