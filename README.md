@@ -15,7 +15,11 @@ git clone https://github.com/samanthasiegel/Fava.git
 <p> bundle install </p>
 <p> Import the CSV files to initialize database tables: </p>
 <p> rake import:restaurants </p>
-<p>rake import:food_items</p>
+<p> rake import:food_items</p>
+<p> rake import:sizes</p>
+<p> rake import:sides</p>
+<p> rake import:categories</p>
+
 
 <h2> Running </h2>
 

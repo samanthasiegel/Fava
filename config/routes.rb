@@ -44,4 +44,6 @@ Rails.application.routes.draw do
   get '/deposit/flex', to: 'payments#flex'
   get '/deposit/card', to: 'payments#card'
 
+  get '/profile', to: 'requests#profile'
+
 end
