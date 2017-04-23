@@ -1,0 +1,28 @@
+<% provide(:title, "Profile") %>
+
+<article id="main">
+	<header>
+		<h2>Profile Information</h2>
+		<!--<p>Select from a list of the on-campus eateries we're currently serving</p>-->
+		
+		<span id="startchange"></span>
+		<section class="wrapper style5">
+				<div class="inner" style="float:center;">
+					<img src='https://studentaffairs.duke.edu/sites/default/files/u110/Sammi%20.jpg' style="float:center; height:175px; width:175px; border-radius: 100%; margin-bottom: 20px;" />
+					<p><b>Name:</b> <%=@fname%> <%=@lname%></p>
+					<p><b>Current Email Address:</b> <%=@email%></p>
+					<p><b>Member since:</b> <%=@user_since.to_formatted_s(:long_ordinal)%></p>
+					<p><b>Total number of posts:</b> <%=@num_post%></p>
+					<p><b>Total number of deliveries: <%=@num_dev%></b></p>
+					<h3>Current Balance: <%=@balance%></h3>
+				</div>
+				<button class="special" href="#">
+                    <%= link_to "Make a Deposit", "/deposit" %>
+                </button>
+                <button class="special" href="#">
+                        <%= link_to "Change Password", "/profile/change_password" %>
+                </button>
+		</section>
+		
+	</header>
+</article>

@@ -309,6 +309,31 @@ layout 'internal'
 	  #  end
   end
 
+  def profile
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+          @fava_user = fava_user
+	        @fname = @fava_user.first_name
+	        @lname = @fava_user.last_name
+	        @email = @fava_user.email
+	        @user_since = @fava_user.created_at
+	        @balance = @fava_user.fava_points
+          @num_post = Request.where(:fava_user_id => fava_user.id).count
+          @num_dev = Request.where(:claimer => fava_user.id, :status => 2).count
+      else
+        redirect_to root_path
+      end
+  end
+
+  def change_password
+      fava_user = FavaUser.find_by_id(session[:fava_user_id])
+      if fava_user && fava_user.activated
+          @fava_user = fava_user
+      else
+        redirect_to root_path
+      end
+  end
+
 
   def request_params
       params.require(:request).permit(:food_item_id, :restaurant_id, :location, :notes, :tip, :side_id, :size_id)
