@@ -99,13 +99,14 @@ layout 'internal'
         request.update(status: 2)
         request.save
         fava_user.update(fava_points: fava_user.fava_points + request.tip.to_f)
+        p request.tip.to_f
         fava_user.save
         if !request.size_id.nil?
           change_in_points = Size.find_by_id(request.size_id).price + request.tip.to_f
           requester.update(fava_points: requester.fava_points - change_in_points)
           requester.save!
         else
-          change_in_points = FoodItem.find_by_id(request.food_item_id) + request.tip.to_f
+          change_in_points = FoodItem.find_by_id(request.food_item_id).price + request.tip.to_f
           requester.update(fava_points: requester.fava_points - change_in_points)
           requester.save!
         end
@@ -347,8 +348,6 @@ layout 'internal'
           @num_dev = Request.where(:claimer => fava_user.id, :status => 2).count
           @fav_items = Request.where(:fava_user_id => fava_user.id).group(:food_item_id).count.sort {|a,b| a[1] <=> b[1]}.reverse.first(3)
 
-          p @fav_items
-
       else
         redirect_to root_path
       end
@@ -397,6 +396,39 @@ layout 'internal'
       else
         redirect_to root_path
       end
+  end
+
+  def top_sellers
+    fava_user = FavaUser.find_by_id(session[:fava_user_id])
+    if fava_user && fava_user.activated
+      @fava_user = fava_user
+      @top_food_items = Request.group(:food_item_id).count.sort{|a,b| a[1] <=> b[1]}.reverse.first(5)
+      #@top_delivery_locations = Request.group(:location).count.sort{}{|a,b| a[1] <=> b[1]}.reverse.first(3)
+      top_restaurants = []
+      Request.all.each do |r|
+        rest = Restaurant.find_by_id(FoodItem.find_by_id(r.food_item_id).restaurant_id)
+        if top_restaurants[rest.id].nil?
+          top_restaurants[rest.id] = 1
+        else
+          top_restaurants[rest.id] = top_restaurants[rest.id] + 1
+        end
+      end
+      for i in 0..top_restaurants.size-1
+        if top_restaurants[i].nil?
+          top_restaurants[i] = 0
+        end
+      end
+      @top_rests = [[]]
+      for i in 0..top_restaurants.size-1
+        @top_rests[i] = []
+        @top_rests[i][0] = i
+        @top_rests[i][1] = top_restaurants[i]
+      end
+      @top_rests = @top_rests.sort{|a,b| a[1] <=> b[1]}.reverse.first(5)
+    else
+      redirect_to root_path
+    end
+
   end
 
 

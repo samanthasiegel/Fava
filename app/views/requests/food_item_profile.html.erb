@@ -30,7 +30,7 @@
 					</div>
                      <% if @broke_message == true %>
                         <h4 style="color:red;"> You don't have enough Fava points to order this delicious food! </h4>
-                        <h4 style="margin-bottom:50px;">Click here to add more. </h4>
+                        <h4 style="margin-bottom:50px;"><%= link_to "Click here to add more.", deposit_path%> </h4>
                     <% else %>
 
                         <button class="special" href="#">

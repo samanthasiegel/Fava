@@ -101,7 +101,6 @@ ActiveRecord::Schema.define(version: 20170424071517) do
     t.string   "close_hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_restaurants_on_name"
   end
 
   create_table "sides", force: :cascade do |t|

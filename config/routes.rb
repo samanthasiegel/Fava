@@ -50,4 +50,6 @@ Rails.application.routes.draw do
   get '/profile/change_password', to: 'requests#change_password'
   patch '/submit_new_password', to: 'requests#submit_new_password'
 
+  get '/top_sellers', to: 'requests#top_sellers'
+
 end

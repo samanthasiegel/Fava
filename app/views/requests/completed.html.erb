@@ -23,11 +23,11 @@
                           <% else %>
                               <h3> <%= r.get_food_name %>, $<%= r.format_float(r.get_food_price) %></h3>
                             <% end %>
-                        <p> Deliver to: <a href="#" style="font-weight:bold;"><%= r.get_user_name %></a> at <%= r.location %> </p>
+                        <p> Delivered to: <a href="#" style="font-weight:bold;"><%= r.get_user_name %></a> at <%= r.location %> </p>
                         <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> <%= r.get_restaurant_name %>
                         <% if !r.side_id.nil? %>
                             <span class="icon fa-cutlery" style="margin-left:30px;"> <%= Side.find_by_id(r.side_id).options %> </span> 
-                        <% end %>
+                        <% end %>ß
                         <span class="icon fa-usd" style="margin-left:30px;"> <%= r.format_float(r.tip) + " tip" %> </span> 
                         </p>
                         <% if !r.notes.nil? and r.notes.size > 0 %>
@@ -36,6 +36,7 @@
                             </span>
                             </p>
                         <% end %>
+                        <p style="margin-left:120px;"> Delivered by: <%= r.get_claimer_name %>
 
                         <hr />
                     <% end %>

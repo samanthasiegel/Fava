@@ -1,0 +1,26 @@
+<% provide(:title, "Top Sellers") %>
+
+<article id="main">
+	<header>
+		<h2>Top Sellers </h2>
+		<p>View the most popular items and restaurants!</p>
+		
+              <span id="startchange"></span>
+			<section class="wrapper style5">
+				<h4> Top food items: </h4>
+				<% @top_food_items.each do |r| %>
+					<div class="inner">
+						<p> <%=link_to FoodItem.find_by_id(r[0]).food_name, food_item_profile_path(food_item: FoodItem.find_by_id(r[0])) %> </p>
+					</div>
+				<% end %>
+				<h4> Top restaurants: </h4>
+				<% for i in 0..@top_rests.size-1 %>
+					<div class="inner">
+						<% if @top_rests[i][1] != 0 %>
+						<p> <%= link_to Restaurant.find_by_id(@top_rests[i][0]).name, list_food_path(restaurant: @top_rests[i][0]) %> </p>
+						<% end %>
+					</div>
+				<% end %>
+			</section>
+	</header>
+</article>

@@ -31,7 +31,7 @@
                             </p>
                         <% end %>
                         <% if !r.claimer.nil? %>
-                            <p> Claimed by <%= FavaUser.find_by_id(r.claimer).first_name  %> </p>
+                            <p style="margin-left:120px;"> Claimed by: <span style="font-weight:bold"><%= r.get_claimer_name  %></span> </p>
                             <% else %>
                                 <%= button_to "Delete", delete_request_path, method: :get, params: {request: r.id}, :class => "button small", :style => "color:red; margin-left:120px;" %>
                           
