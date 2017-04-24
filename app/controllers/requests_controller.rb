@@ -173,8 +173,8 @@ layout 'internal'
           end
           p @broke_message
           @restaurant = Restaurant.find_by_id(@food_item.restaurant_id)
-          if(Size.where(:food_item_id => @food_item.id).all.size > 0)
-            @size = Size.where(:food_item_id => @food_item.id).all
+          if(@food_item.sizes.size > 0)
+            @size = @food_item.sizes
           end
           @allergy_not_empty = (@food_item.allergy_info != "\\N")
 
@@ -273,8 +273,8 @@ layout 'internal'
           @food_item = FoodItem.find_by_id(params[:food_item])
           @msg = params[:msg]
           @restaurant = Restaurant.find_by_id(@food_item.restaurant_id)
-          @sides = Side.where(:food_item_id => @food_item.id)
-          @sizes = Size.where(:food_item_id => @food_item.id)
+          @sides = @food_item.sides
+          @sizes = @food_item.sizes
           @request = Request.new
           
         elsif request_params[:food_item_id] != nil

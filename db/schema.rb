@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422225309) do
+ActiveRecord::Schema.define(version: 20170424071517) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20170422225309) do
     t.float   "price"
     t.string  "allergy_info"
     t.integer "dietary_info"
-    t.boolean "size"
     t.index ["restaurant_id"], name: "index_food_items_on_restaurant_id"
   end
 
@@ -61,6 +60,21 @@ ActiveRecord::Schema.define(version: 20170422225309) do
     t.string   "state"
     t.string   "zip_code"
     t.integer  "user_id"
+  end
+
+  # create_table "posts", force: :cascade do |t|
+  #   t.integer  "poster"
+  #   t.integer  "claimer"
+  #   t.integer  "food_item"
+  #   t.decimal  "tip"
+  #   t.string   "notes"
+  #   t.integer  "status"
+  #   t.datetime "created_at",   null: false
+  #   t.datetime "updated_at",   null: false
+  #   t.integer  "fava_user_id"
+  #   t.integer  "food_item_id"
+  #   t.index ["fava_user_id"], name: "index_posts_on_fava_user_id"
+  #   t.index ["food_item_id"], name: "index_posts_on_food_item_id"
   end
 
   create_table "requests", force: :cascade do |t|

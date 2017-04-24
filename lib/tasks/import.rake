@@ -68,7 +68,7 @@ namespace :import do
 		CSV.foreach(filename) do |row|
 			f_id, restaurant, food_name, description, category, price, size, allergy_info, dietary_info = row
 			f = FoodItem.new(restaurant_id: restaurant, food_name: food_name, description: description, category: category,
-				price: price, size: size, allergy_info: allergy_info, dietary_info: dietary_info)
+				price: price, allergy_info: allergy_info, dietary_info: dietary_info)
 			f.id = f_id
 			f.save!
 			puts "#{food_name} - #{f.errors.full_messages.join(',')}" if f.errors.any?
