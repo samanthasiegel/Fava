@@ -8,6 +8,9 @@
               <span id="startchange"></span>
 			<section class="wrapper style5">
 				<h4> Top food items: </h4>
+				<% if @top_food_items.nil? or @top_food_items.size == 0%>
+					<h4> No items to show! </h4>
+				<% else %>
 				<% @top_food_items.each do |r| %>
 					<div class="inner">
 						<p> <%=link_to FoodItem.find_by_id(r[0]).food_name, food_item_profile_path(food_item: FoodItem.find_by_id(r[0])) %> </p>
@@ -20,6 +23,7 @@
 						<p> <%= link_to Restaurant.find_by_id(@top_rests[i][0]).name, list_food_path(restaurant: @top_rests[i][0]) %> </p>
 						<% end %>
 					</div>
+				<% end %>
 				<% end %>
 			</section>
 	</header>

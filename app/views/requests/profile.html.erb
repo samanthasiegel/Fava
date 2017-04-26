@@ -27,9 +27,11 @@
 	                </button>
 					<hr />
 					<h3> Favorite food items: </h3>
-					<% @fav_items.each do |f| %>
-						<p> <%= FoodItem.find_by_id(f[0]).food_name %></p>
-					<% end %>
+					<% if !@fav_items.nil? %>
+						<% @fav_items.each do |f| %>
+							<p> <%= FoodItem.find_by_id(f[0]).food_name %></p>
+						<% end %>
+					<%end %>
 					</div> </section> 
 		
 	</header>

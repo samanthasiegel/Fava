@@ -4,6 +4,9 @@
 	<header>
 		<h2>Complete Delivery</h2>
 			<section class="wrapper style5">
+                <% if !@msg.nil? and @msg == '1' %>
+                    <h4 style="color:red; font-size:18px;"> Incorrect pin. Try again. </h4>
+                <% end %>
                 <%= form_tag check_pin_path do %>
                     <%= label_tag :pin ,"Enter your 4-digit pin: "%>
                     <div style="padding-right:500px; padding-left:500px;" >
