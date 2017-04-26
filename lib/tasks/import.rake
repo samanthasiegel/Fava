@@ -123,4 +123,38 @@ namespace :import do
 		puts "Imported #{counter} categories"
 	end
 
+	desc "Import dish_items from csv"
+	task dish_items: :environment do
+		filename = File.join Rails.root, "dish_items.csv"
+		counter = 0;
+		sameNameCount = 0
+		CSV.foreach(filename).with_index do |row, i|
+			# if i < 90000
+			# 	next
+			# end
+			id, name, description, menus_appeared, times_appeared, 
+			first_appeared, last_appeared, low_price, high_price = row
+			if name != nil and low_price != nil and high_price != nil and (Float(low_price) rescue false)
+				low_price_float = Float(low_price)
+				high_price_float = Float(high_price)
+				average_price = (low_price_float + high_price_float)/2
+				r = Restaurant.where('lower(name) = ?', 'dba name').first
+				r_id = r.id
+				f = FoodItem.new(rest: r_id, food_name: name, description: description, category: "Old Timey",
+				price: average_price, allergy_info: "\N", dietary_info: 0)
+				if FoodItem.where('lower(food_name) = ?', name.downcase).all.size == 0
+					f.save!
+					puts "#{name} - #{r.errors.full_messages.join(',')}" if f.errors.any?
+					counter += 1 if f.persisted?
+					puts counter
+				else 
+					puts "Same Name: #{sameNameCount}"
+					sameNameCount += 1
+				end
+			end
+		end
+		puts "Imported #{counter} restaurants"
+		puts "#{sameNameCount} restaurants weren't imported"
+	end
+
 end
