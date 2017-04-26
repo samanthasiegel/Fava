@@ -27,7 +27,7 @@
                         <p style="margin-left:120px;"> <span class="icon fa-map-marker"></span> <%= r.get_restaurant_name %>
                         <% if !r.side_id.nil? %>
                             <span class="icon fa-cutlery" style="margin-left:30px;"> <%= Side.find_by_id(r.side_id).options %> </span> 
-                        <% end %>ß
+                        <% end %>
                         <span class="icon fa-usd" style="margin-left:30px;"> <%= r.format_float(r.tip) + " tip" %> </span> 
                         </p>
                         <% if !r.notes.nil? and r.notes.size > 0 %>

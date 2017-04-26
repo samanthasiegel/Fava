@@ -43,6 +43,7 @@ and then
 NOTE: Update the version in the command as needed.
 
 <h2> General Information </h2>
+<p> The app is best viewed in Full Screen using Google Chrome. </p>
 <p> We use several CSV files to import our database entries:</p>
 <p>1. food_items2.csv = all food items from restaurants on Duke's campus</p>
 <p>2. restaurants.csv = all restaurants on Duke's campus</p>
