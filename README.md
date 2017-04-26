@@ -43,12 +43,12 @@ and then
 NOTE: Update the version in the command as needed.
 
 <h2> General Information </h2>
-<p> We use several CSV files to import our database entries:
-1. food_items2.csv = all food items from restaurants on Duke's campus
-2. restaurants.csv = all restaurants on Duke's campus
-3. sides.csv = sides associated to food items from (1)
-4. sizes.csv = sizes associated to food items from (1)
-5. categories.csv = entries for categories, to implement "Search by Category" in app
-6. restaurants_balt.csv = entries for all restaurants in Baltimore (used to show our app can handle larger amounts of data). To import -- run "rake import:restaurants_balt" in the command line.
-7. restaurants_wake.csv = entries for all restaurants in Wake County (also used to show our app can hande larger data). To import -- run "rake import:restaurants_wake" in the command line.
+<p> We use several CSV files to import our database entries:</p>
+<p>1. food_items2.csv = all food items from restaurants on Duke's campus</p>
+<p>2. restaurants.csv = all restaurants on Duke's campus</p>
+<p>3. sides.csv = sides associated to food items from (1)</p>
+<p>4. sizes.csv = sizes associated to food items from (1)</p>
+<p>5. categories.csv = entries for categories, to implement "Search by Category" in app</p>
+<p>6. restaurants_balt.csv = entries for all restaurants in Baltimore (used to show our app can handle larger amounts of data). To import -- run "rake import:restaurants_balt" in the command line.</p>
+<p>7. restaurants_wake.csv = entries for all restaurants in Wake County (also used to show our app can hande larger data). To import -- run "rake import:restaurants_wake" in the command line.</p>
 
