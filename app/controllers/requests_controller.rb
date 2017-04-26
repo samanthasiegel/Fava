@@ -309,6 +309,8 @@ layout 'internal'
           redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 2
         elsif !(current_hour + current_minute >= @restaurant.open_hour and current_hour + current_minute <= @restaurant.close_hour)
           redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 3
+        elsif @food_item.price.to_f + request_params[:tip].to_f > @fava_user.fava_points
+            redirect_to controller: 'requests', action: 'order', food_item: @food_item.id, msg: 4
         else
 
           if(!@side.nil?)
