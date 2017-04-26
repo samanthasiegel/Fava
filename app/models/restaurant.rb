@@ -1,7 +1,7 @@
 class Restaurant < ApplicationRecord
 	# Restaurant associated to many food items
 	has_many :food_items
-
+	validates :name, presence: true, uniqueness: {case_sensitive: true, scope: [:location]}
 	# Checks that restaurant is unique (by name and location)
 	before_create :unique_rest
 
@@ -16,6 +16,7 @@ class Restaurant < ApplicationRecord
 	validates :open_hour, presence:true, length: {is: 4}
 	validates :close_hour, presence:true, length: {is: 4}
 	validate :time_formatting
+
 
 	def time_formatting
 		if(open_hour < "0000" or open_hour > "2400")
