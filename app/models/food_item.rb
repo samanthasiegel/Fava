@@ -70,7 +70,7 @@ class FoodItem < ApplicationRecord
 
 	def unique_at_restaurant
 		FoodItem.where(:food_name => food_name).all.each do |f|
-			if id_was == id and f.id != id and f.restaurant_id == restaurant_id and f.size == size
+			if id_was == id and f.id != id and f.restaurant_id == restaurant_id
 				errors.add(:restaurant_id, 'not a unique entry for this restaurant')
 			end
 		end
