@@ -27,6 +27,18 @@ layout 'internal'
       if fava_user && fava_user.activated
           @fava_user = fava_user
           @requests = Request.all.order('updated_at DESC')
+          to_destroy = []
+          j = 0
+          for i in 0..@requests.length - 1
+            if check_timed_out(@requests[i])
+              to_destroy[j] = @requests[i]
+              j = j + 1
+            end
+          end
+          for k in 0..to_destroy.length - 1
+            to_destroy[k].destroy
+          end
+            
       else
         redirect_to root_path
       end
@@ -37,6 +49,7 @@ layout 'internal'
     if fava_user && fava_user.activated
       @fava_user = fava_user
       @requests = Request.where(:status => 2).order('updated_at DESC')
+      p @requests
     else
       redirect_to root_path
     end
@@ -48,6 +61,17 @@ layout 'internal'
     if fava_user && fava_user.activated
       @fava_user = fava_user
       @requests = Request.where(:fava_user_id => fava_user.id, :status => [0, 1]).all.order('updated_at DESC')
+      to_destroy = []
+          j = 0
+          for i in 0..@requests.length - 1
+            if check_timed_out(@requests[i])
+              to_destroy[j] = @requests[i]
+              j = j + 1
+            end
+          end
+          for k in 0..to_destroy.length - 1
+            to_destroy[k].destroy
+          end
     else
       redirect_to root_path
     end
@@ -68,6 +92,7 @@ layout 'internal'
     if fava_user && fava_user.activated
       @fava_user = fava_user
       @requests = Request.where(:claimer => fava_user.id).order(:status, :created_at)
+      
       p @requests
     else
       redirect_to root_path
@@ -433,6 +458,20 @@ layout 'internal'
       redirect_to root_path
     end
 
+  end
+
+  def check_timed_out(request)
+    if !request.nil?
+        current_time = DateTime.now.strftime("%H:%M")
+        current_hour = current_time[0..1]
+        current_minute = current_time[3..4]
+        requested_hour = request.created_at.to_s[11..12]
+        requested_minute = request.created_at.to_s[14..15]
+        if (current_hour + current_minute).to_f >= (requested_hour + requested_minute).to_f + 2
+          return true
+        end
+      end
+      return false
   end
 
 

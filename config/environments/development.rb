@@ -9,6 +9,8 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  config.time_zone = "Eastern Time (US & Canada)"
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
