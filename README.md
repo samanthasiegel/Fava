@@ -52,4 +52,9 @@ NOTE: Update the version in the command as needed.
 <p>5. categories.csv = entries for categories, to implement "Search by Category" in app</p>
 <p>6. restaurants_balt.csv = entries for all restaurants in Baltimore (used to show our app can handle larger amounts of data). To import -- run "rake import:restaurants_balt" in the command line.</p>
 <p>7. restaurants_wake.csv = entries for all restaurants in Wake County (also used to show our app can hande larger data). To import -- run "rake import:restaurants_wake" in the command line.</p>
+<h2> For testing with enormous datasets :</h2>
+<p> 1. food_inspection_restaurants.csv = 80,000 entries for restaurants (taken from food inspection data in Chicago)</p>
+<p> To import, run: rake import:food_inspection_restaurants </p>
+<p> 2. dish_items.csv = 150,000+ entries for food items (taken from old restaurant menu data in NYC) </p>
+<p> To import, run: rake import:dish_items </p>
 
